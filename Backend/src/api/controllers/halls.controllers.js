@@ -11,6 +11,8 @@ const getHalls = async(req, res) => {
     }
 };
 
+//borrar
+
 const getHallById = async(req, res) => {
     try {
         const {id} = req.params;
