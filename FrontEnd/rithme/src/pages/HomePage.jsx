@@ -6,16 +6,16 @@ export default function HomePage() {
 
         <div className="home"> 
         <Header></Header>
-        <button className="rounded-full">Conciertos</button>
-        <button className="rounded-full">Amigos</button>
-        <button className="rounded-full">Fan Club</button>
+        <button className="home__button">Conciertos</button>
+        <button className="home__button">Amigos</button>
+        <button className="home__button">Fan Club</button>
 
 
             <div className="home__categories">
 
                 <div className="home__categories--title">
-                    <h1>Hola!</h1>
-                    <h2>¿Qué concierto te apetece?</h2>
+                    <h1 className="text-5xl">¡Hola Mundo!</h1>
+                    <h2 className="text-2xl">¿Qué concierto te apetece?</h2>
                 </div>
 
                 <div className="home__categories--types">

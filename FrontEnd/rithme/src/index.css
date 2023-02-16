@@ -16,6 +16,8 @@ code {
     monospace;
 }
 
-.font-link {
-  font-family: 'Red Hat Display', sans-serif;
-}
+@font-face {
+  font-family: "RedHat";
+  src: local("RedHat"),
+   url("./fonts/RedHat/static/RedHatDisplay-Regular.ttf") format("truetype");
+  }
