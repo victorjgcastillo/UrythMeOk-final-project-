@@ -1,4 +1,5 @@
 import Header from "../components/Header/Header";
+import Navbar from "../components/Navbar/Navbar";
 import './HomePage.scss';
 
 export default function HomePage() {
@@ -24,6 +25,8 @@ export default function HomePage() {
                     <h3 class="font-bold">SALAS</h3>
                     <h3 class="font-bold">ONDAS</h3>
                     <h3 class="font-bold">REVISTAS</h3>
+
+                    <Navbar></Navbar>
                 </div>
 
 
