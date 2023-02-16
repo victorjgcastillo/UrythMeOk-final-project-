@@ -21,28 +21,6 @@ export default function HomePage() {
                     <h3>SALAS</h3>
                     <h3>ONDAS</h3>
                     <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
-                    <h3>REVISTAS</h3>
                 </div>
 
 
