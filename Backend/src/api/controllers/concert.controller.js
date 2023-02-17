@@ -38,10 +38,22 @@ const addTicketConcert = async(req, res) => {
     }
 }
 
+// -----------------------------------------------------------
+
+const postConcert = async (req,res) => {
+    try {
+        const concert = req.body;
+        const inserted = await Concert.insertMany(concert);
+        res.status(201).json(inserted);
+    } catch (error) {
+        return res.status(500).json(error);
+    }
+};
 
 //---------------------------------OUTPUT---------------------------------
 module.exports = {
     getConcerts,
     getConcertById,
-    addTicketConcert
+    addTicketConcert,
+    postConcert
 }

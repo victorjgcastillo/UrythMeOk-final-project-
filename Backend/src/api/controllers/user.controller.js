@@ -47,14 +47,14 @@ const login = async(req, res, next) => {
     }
 }
 
-const addConcert = async(req, res) => {
+const addTicket = async(req, res) => {
     try {
-        const {userId,concertId} = req.body;
+        const {userId,ticketId} = req.body;
         const myUser = await User.findById(userId);
-        if(!myUser.concerts){
-            myUser.concerts = [];
+        if(!myUser.tickets){
+            myUser.tickets = [];
         }
-        myUser.concerts.push(concertId);
+        myUser.tickets.push(ticketId);
         const updatedUser = await User.findByIdAndUpdate(userId, myUser, {new: true});
         return res.status(200).json(updatedUser);
     } catch (error) {
@@ -103,7 +103,7 @@ const getUsers = async(req, res) => {
 module.exports = {
     register, 
     login, 
-    addConcert,
+    addTicket,
     addConcertDesired,
     addVip,
     getUsers

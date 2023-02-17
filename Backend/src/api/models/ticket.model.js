@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const ticketSchema = mongoose.Schema(
     {
         userId:{type:mongoose.Schema.Types.ObjectId, ref: 'user'},
-        concertId: {type:String},
+        concertId: {type:mongoose.Schema.Types.ObjectId, ref: 'concert'},
         numTickets: {type:Number},
         name: {type:String},
         email:{type:String},

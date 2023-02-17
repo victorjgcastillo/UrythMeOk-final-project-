@@ -4,6 +4,16 @@ const bcrypt = require('bcrypt');
 //---------------------------------INPUT---------------------------------
 
 const getFanClub = async(req, res) => {
+    try {        
+        const allFanClub = await FanClub.find();
+        res.status(200).json(allFanClub);
+        
+    } catch (error) {
+        return res.status(500).json(error);
+    }
+};
+
+const getFanClubById = async(req, res) => {
     try {
         const {id} = req.params;
         const myClubInfo = await FanClub.findById(id);
@@ -43,5 +53,6 @@ const postFanClub = async (req,res) => {
 //---------------------------------OUTPUT---------------------------------
 module.exports = {
     getFanClub,
+    getFanClubById,
     postFanClub
 }

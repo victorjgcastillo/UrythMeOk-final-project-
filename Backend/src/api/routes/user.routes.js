@@ -2,7 +2,7 @@ const express = require('express');
 const {
     register, 
     login,
-    addConcert,
+    addTicket,
     addConcertDesired,
     addVip,
     getUsers
@@ -16,7 +16,7 @@ router.post('/register', register);
 router.post('/login', login);
 
 router.put('/add-desired-concert', addConcertDesired);
-router.put('/add-concert', addConcert);
+router.put('/add-ticket', addTicket);
 router.put('/add-vip', addVip);
 
 module.exports = router;

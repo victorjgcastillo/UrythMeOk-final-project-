@@ -3,16 +3,6 @@ const bcrypt = require('bcrypt');
 
 //---------------------------------INPUT---------------------------------
 
-// const getTickets = async(req, res) => {
-//     try {        
-//         const allTickets = await Tickets.find();
-//         res.status(200).json(allHalls);
-        
-//     } catch (error) {
-//         return res.status(500).json(error);
-//     }
-// };
-
 const getTicketById = async(req, res) => {
     try {
         const {id} = req.params;
@@ -64,10 +54,18 @@ const postTicket = async (req,res) => {
     }
 };
 
+const getTickets = async(req, res) => {
+    try {        
+        const allTickets = await Tickets.find();
+        res.status(200).json(allTickets);
+    } catch (error) {
+        return res.status(500).json(error);
+    }
+};
 
 //---------------------------------OUTPUT---------------------------------
 module.exports = {
-    // getTickets,
+    getTickets,
     getTicketById,
     postTicket
 }
