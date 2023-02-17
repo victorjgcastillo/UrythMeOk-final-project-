@@ -1,84 +1,36 @@
-import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
-// import "./Slider.scss";
+import React, { useEffect, useState } from "react";
+import { motion } from 'framer-motion';
+import "../../styles/Slider.css"
 
-function Slider() {
-  const [artists, setArtists] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const sliderRef = useRef();
 
-  useEffect(() => {
-    axios.get("http://localhost:5000/artists")
-      .then(response => {
-        setArtists(response.data);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  }, []);
 
-  const handlePrevious = () => {
-    const index = currentIndex === 0 ? artists.length - 1 : currentIndex - 1;
-    setCurrentIndex(index);
-  };
 
-  const handleNext = () => {
-    const index = currentIndex === artists.length - 1 ? 0 : currentIndex + 1;
-    setCurrentIndex(index);
-  };
+export default function Slider() {
 
-  const handleTouchStart = e => {
-    setIsDragging(true);
-    setStartX(e.touches[0].clientX);
-  };
+    const [categories, setCategories] = useState([]);
 
-  const handleTouchMove = e => {
-    if (!isDragging) return;
-    const currentX = e.touches[0].clientX;
-    const diff = currentX - startX;
-    sliderRef.current.style.transform = `translateX(${diff}px)`;
-  };
+    useEffect(() => {
+        axios('http://localhost:5000/artists')
+        .then(res => {
+            console.log(res.data);
+            setCategories(res.data)
+        })
+    }, [])
+   
+    return (
+    <motion.div className="slider-container">
+    <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-3022.91}}>
 
-  const handleTouchEnd = e => {
-    setIsDragging(false);
-    const currentX = e.changedTouches[0].clientX;
-    const diff = currentX - startX;
-    if (diff > 100 && currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    } else if (diff < -100 && currentIndex < artists.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
-    sliderRef.current.style.transform = "";
-  };
+    {categories.map((categorie, id)=> (
+    <motion.div className="slider-item" key={id}>
 
-  return (
-    <div className="slider">
-      <button className="previous" onClick={handlePrevious}>
-        Previous
-      </button>
-      <button className="next" onClick={handleNext}>
-        Next
-      </button>
-      <div
-        className="slides"
-        ref={sliderRef}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-      >
-        {artists.map((artist, index) => (
-          <div
-            key={artist.id}
-            className={`slide ${index === currentIndex ? "active" : ""}`}
-          >
-            <img src={artist.img} alt={artist.name} className="slides__img"/>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+            <img src={categorie.img} alt={categorie.name} className="slider-img" />   
+                 
+
+    </motion.div>
+    ))}
+    </motion.div>
+    </motion.div>
+)
 }
-
-export default Slider;

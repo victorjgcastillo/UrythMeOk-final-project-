@@ -26,7 +26,8 @@ app.use((req, res, next) => {
 })
 
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://localhost:4200', 'http://RUTADEMIFRONT.com'],
+    origin: '*',
+    // origin: ['http://localhost:3000', 'http://localhost:4200', 'http://RUTADEMIFRONT.com'],
     credentials: true
 }))
 
@@ -42,3 +43,6 @@ app.use('/genres', genresRouter);
 app.use('/artists', artistRouter);
 
 app.listen(5000, () => console.log('listening on port', PORT));
+
+
+

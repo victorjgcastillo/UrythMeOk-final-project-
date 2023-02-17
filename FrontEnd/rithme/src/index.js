@@ -1,12 +1,14 @@
 // import React from 'react';
+import * as React from 'react'
 import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
+
 import reportWebVitals from './reportWebVitals';
 import './fonts/RedHat/static/RedHatDisplay-Regular.ttf';
 import './fonts/Raleway/static/Raleway-Regular.ttf';
 import './fonts/Oxygen/Oxygen-Regular.ttf';
-import * as React from 'react'
+
 
 // 1. import `ChakraProvider` component
 import { ChakraProvider } from '@chakra-ui/react'

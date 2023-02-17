@@ -5,16 +5,6 @@ import Header from "../components/Header/Header";
 import './HomePage.scss';
 
 export default function HomePage() {
-    
-    // const [categories, setCategories] = useState([]);
-
-    // useEffect(() => {
-    //     axios('http://localhost:5000/artists')
-    //     .then(res => {
-    //         console.log(res.data);
-    //         setCategories(res.data)
-    //     })
-    // }, [])
 
     return (
 
@@ -27,8 +17,8 @@ export default function HomePage() {
 
 
                 <div className="home__title">
-                    <h1 className="text-5xl">¡Hola Mundo!</h1>
-                    <h2 className="text-2xl">¿Qué concierto te apetece?</h2>
+                    <h1 className="">¡Hola Mundo!</h1>
+                    <h2 className="">¿Qué concierto te apetece?</h2>
                 </div>
 
 
@@ -39,22 +29,14 @@ export default function HomePage() {
                     <h3 className="home__categories--section--artist">ARTISTAS</h3>
 
                     {/* <Slider></Slider> */}
-                    
-                    
-
-                        {/* <div className="home__categories--section--artist--carrousel">
-                            <div className="home__categories--section--artist-carrousel--slides">
-                                {categories.map(categorie => (
-                                <img key={categorie.id} src={categorie.img} alt={categorie.name} className="home__categories--section--artist-carrousel--slides--img"/>
-                                ))}
-                            </div>
-                        </div> */}
+                
 
                         
                     <h3 className="">ESTILOS</h3>
                     <h3 className="">SALAS</h3>
                     <h3 className="">ONDAS</h3>
                     <h3 className="">REVISTAS</h3>
+
                 </div>
 
 
