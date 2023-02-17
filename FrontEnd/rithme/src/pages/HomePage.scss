@@ -1,17 +1,21 @@
 .home {
-    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
-    position: fixed; 
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    // position: fixed; 
     top: 0; 
     left: 0; 
     min-width: 100%;
     min-height: 100%;
-    font-family: "RedHat";
+    font-family: "Oxygen";
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
     
     &__button {
         border-width: 2px;
         border-style: none;
         font-size: 20px;
         margin: 20px;
+        background-color: white;
     }
 
 

@@ -21,3 +21,15 @@ code {
   src: local("RedHat"),
    url("./fonts/RedHat/static/RedHatDisplay-Regular.ttf") format("truetype");
   }
+
+@font-face {
+    font-family: "Raleway";
+    src: local("Raleway"),
+     url("./fonts/Raleway/static/Raleway-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Oxygen";
+  src: local("Oxygen"),
+   url("./fonts/Oxygen/Oxygen-Regular.ttf") format("truetype");
+}
