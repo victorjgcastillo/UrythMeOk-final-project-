@@ -18,7 +18,6 @@ const PORT = process.env.PORT;
 const app = express();
 connect();
 
-
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Method', 'POST, GET, PUT, DELETE, PATCH');  //definimos que metodos permitimos en nuestra API
     res.header('Access-Control-Allow-Credentials', 'true'); //podemos recibir una conexion con credenciales
@@ -28,6 +27,7 @@ app.use((req, res, next) => {
 
 app.use(cors({
     origin: '*',
+    // origin: ['http://localhost:3000', 'http://localhost:4200', 'http://RUTADEMIFRONT.com'],
     credentials: true
 }))
 

@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 // 1 - SCHEMA
 const concertSchema = mongoose.Schema(
     {
+        name: {type: String, required:true},
         date: {type: String, required:true},
         time: {type: String, required:true},
         price: {type: mongoose.Types.Decimal128, required:true},

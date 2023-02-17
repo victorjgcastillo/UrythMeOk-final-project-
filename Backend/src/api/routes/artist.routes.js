@@ -1,12 +1,8 @@
 const express = require('express');
 const {
-    getArtist,
+    getArtists,
     getArtistById,
     postArtist
-    // postRestaurant,
-    // postRestaurants,
-    // putRestaurant,
-    // deleteRestaurant,
 } = require('../controllers/artist.controllers');
 
 const {isAuth} = require('../middleware/auth');
@@ -14,7 +10,7 @@ const {isAuth} = require('../middleware/auth');
 const router = express.Router();
 
 //metodos GET
-router.get('/', getArtist);
+router.get('/', getArtists);
 router.get('/:id', getArtistById);
 router.post('/',postArtist );
  

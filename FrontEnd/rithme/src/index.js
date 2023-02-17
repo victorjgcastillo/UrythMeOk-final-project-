@@ -1,10 +1,26 @@
-import React from 'react';
+// import React from 'react';
+import * as React from 'react'
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import './index.css';
+// import App from './App';
+
 import reportWebVitals from './reportWebVitals';
 import './fonts/RedHat/static/RedHatDisplay-Regular.ttf';
 import './fonts/Raleway/static/Raleway-Regular.ttf';
 import './fonts/Oxygen/Oxygen-Regular.ttf';
+
+
+// 1. import `ChakraProvider` component
+import { ChakraProvider } from '@chakra-ui/react'
+
+function App() {
+  // 2. Wrap ChakraProvider at the root of your app
+  return (
+    <ChakraProvider>
+      <App />
+    </ChakraProvider>
+  )
+}
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -2,7 +2,8 @@ const express = require('express');
 const {
     getConcerts,
     getConcertById,
-    addTicketConcert
+    addTicketConcert,
+    postConcert
 } = require('../controllers/concert.controller');
 
 const {isAuth} = require('../middleware/auth');
@@ -11,6 +12,7 @@ const router = express.Router();
 
 router.get('/', getConcerts);
 router.get('/:id', getConcertById);
+router.post('/', postConcert);
 router.put('/add-ticket/:id', addTicketConcert);
 
 //---------------------------------OUTPUT---------------------------------
