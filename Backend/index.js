@@ -26,6 +26,6 @@ app.use('/users', userRouter);
 app.use('/tickets', ticketRouter);
 app.use('/concerts', concertRouter);
 app.use('/genres', genresRouter);
-app.use('/artist', artistRouter);
+app.use('/artists', artistRouter);
 
 app.listen(5000, () => console.log('listening on port', PORT));
