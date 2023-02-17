@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0 20%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +10,22 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: "RedHat";
+  src: local("RedHat"),
+   url("./fonts/RedHat/static/RedHatDisplay-Regular.ttf") format("truetype");
+  }
+
+@font-face {
+    font-family: "Raleway";
+    src: local("Raleway"),
+     url("./fonts/Raleway/static/Raleway-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Oxygen";
+  src: local("Oxygen"),
+   url("./fonts/Oxygen/Oxygen-Regular.ttf") format("truetype");
 }
