@@ -3,6 +3,9 @@ const dotenv = require('dotenv');
 
 //---------------------------------ROUTES---------------------------------
 const hallsRouter = require('./src/api/routes/halls.routes');
+const genresRouter = require('./src/api/routes/genre.routes');
+const artistRouter = require('./src/api/routes/artist.routes');
+//const genresRouter = require('./src/api/routes/genre.routes');
 // const userRouter = require('./src/api/routes/user.routes');
 
 dotenv.config();
@@ -16,5 +19,7 @@ app.use(express.urlencoded({extended: true}));
 
 app.use('/halls', hallsRouter);
 // app.use('/users', userRouter);
+app.use('/genres', genresRouter);
+app.use('/artist', artistRouter);
 
 app.listen(5000, () => console.log('listening on port', PORT));
