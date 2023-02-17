@@ -20,6 +20,6 @@ app.use(express.urlencoded({extended: true}));
 app.use('/halls', hallsRouter);
 // app.use('/users', userRouter);
 app.use('/genres', genresRouter);
-app.use('/artist', artistRouter);
+app.use('/artists', artistRouter);
 
 app.listen(5000, () => console.log('listening on port', PORT));
