@@ -6,9 +6,9 @@ export default function HomePage() {
 
         <div className="home"> 
         <Header></Header>
-        <button className="home__button">Conciertos</button>
-        <button className="home__button">Amigos</button>
-        <button className="home__button">Fan Club</button>
+        <button className="rounded-md ...">Conciertos</button>
+        <button className="rounded-full">Amigos</button>
+        <button className="rounded-full">Fan Club</button>
 
 
             <div className="home__categories">
