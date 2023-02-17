@@ -1,5 +1,5 @@
 .home {
-    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    background: linear-gradient(177deg, #005eb8 0%, #00ff88 64%);
     // position: fixed; 
     top: 0; 
     left: 0; 
@@ -9,13 +9,31 @@
     font-weight: bold;
     display: flex;
     flex-direction: column;
+
+    &__title h2{
+        color: white;
+    }
+    &__title h1{
+        color: rgb(234, 241, 4);
+    }
     
     &__button {
-        border-width: 2px;
+        width: 70pt;
+        height: 31pt;
         border-style: none;
-        font-size: 20px;
+        font-size: 12pt;
         margin: 20px;
-        background-color: white;
+        background-color: #38dbb8;
+        color: white;
+        border-radius: 12pt;
+    }
+
+    &__container{
+
+        &--buttons{
+            display: flex;
+            justify-content: center;
+        }
     }
 
 
