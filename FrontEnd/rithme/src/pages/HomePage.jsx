@@ -33,7 +33,7 @@ export default function HomePage() {
 
                 <div className="home__categories--types">
 
-                    <h3 class="font-bold">ARTISTAS</h3>
+                    <h3 className="font-bold">ARTISTAS</h3>
                     
                         <ul className="homes__categories--ul">
 
@@ -48,10 +48,10 @@ export default function HomePage() {
                         </ul>
 
 
-                    <h3 class="font-bold">ESTILOS</h3>
-                    <h3 class="font-bold">SALAS</h3>
-                    <h3 class="font-bold">ONDAS</h3>
-                    <h3 class="font-bold">REVISTAS</h3>
+                    <h3 className="font-bold">ESTILOS</h3>
+                    <h3 className="font-bold">SALAS</h3>
+                    <h3 className="font-bold">ONDAS</h3>
+                    <h3 className="font-bold">REVISTAS</h3>
                 </div>
 
 
