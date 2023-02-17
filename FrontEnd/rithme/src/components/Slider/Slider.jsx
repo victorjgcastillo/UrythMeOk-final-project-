@@ -73,7 +73,7 @@ function Slider() {
             key={artist.id}
             className={`slide ${index === currentIndex ? "active" : ""}`}
           >
-            <img src={artist.img} alt={artist.name} />
+            <img src={artist.img} alt={artist.name} className="slides__img"/>
           </div>
         ))}
       </div>

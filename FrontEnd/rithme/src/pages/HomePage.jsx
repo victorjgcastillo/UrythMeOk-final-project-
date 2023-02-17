@@ -1,7 +1,7 @@
 // import axios from "axios";
 // import { useEffect, useState } from "react";
 import Header from "../components/Header/Header";
-import Slider from "../components/Slider/Slider";
+// import Slider from "../components/Slider/Slider";
 import './HomePage.scss';
 
 export default function HomePage() {
@@ -20,9 +20,9 @@ export default function HomePage() {
 
         <div className="home"> 
         <Header></Header>
-        <button className="rounded-full home__button">Conciertos</button>
-        <button className="rounded-full home__button">Amigos</button>
-        <button className="rounded-full home__button">Fan Club</button>
+        <button className="home__button">Conciertos</button>
+        <button className="home__button">Amigos</button>
+        <button className="home__button">Fan Club</button>
 
 
 
@@ -36,20 +36,11 @@ export default function HomePage() {
 
                 <div className="home__categories--section">
 
-                    <h3 className="font-bold home__categories--section--artist">ARTISTAS</h3>
+                    <h3 className="home__categories--section--artist">ARTISTAS</h3>
 
-                    <Slider></Slider>
+                    {/* <Slider></Slider> */}
                     
-                        {/* <ul className="homes__categories--section--ul">
-
-                        {categories.map((categorie, id)=> (
-                        <figure key={id}>
-
-                                <img src={categorie.img} alt={categorie.name} className="home__categories--section--ul--img"></img>   
-
-                        </figure>
-                        ))}
-                        </ul> */}
+                    
 
                         {/* <div className="home__categories--section--artist--carrousel">
                             <div className="home__categories--section--artist-carrousel--slides">
@@ -59,11 +50,11 @@ export default function HomePage() {
                             </div>
                         </div> */}
 
-
-                    <h3 className="font-bold">ESTILOS</h3>
-                    <h3 className="font-bold">SALAS</h3>
-                    <h3 className="font-bold">ONDAS</h3>
-                    <h3 className="font-bold">REVISTAS</h3>
+                        
+                    <h3 className="">ESTILOS</h3>
+                    <h3 className="">SALAS</h3>
+                    <h3 className="">ONDAS</h3>
+                    <h3 className="">REVISTAS</h3>
                 </div>
 
 
