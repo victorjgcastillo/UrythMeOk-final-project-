@@ -47,7 +47,64 @@ const login = async(req, res, next) => {
     }
 }
 
+const addConcert = async(req, res) => {
+    try {
+        const {userId,concertId} = req.body;
+        const myUser = await User.findById(userId);
+        if(!myUser.concerts){
+            myUser.concerts = [];
+        }
+        myUser.concerts.push(concertId);
+        const updatedUser = await User.findByIdAndUpdate(userId, myUser, {new: true});
+        return res.status(200).json(updatedUser);
+    } catch (error) {
+        return res.status(500).json(error);
+    }
+}
+
+const addConcertDesired = async(req, res) => {
+    try {
+        const {userId,concertId} = req.body;
+        const myUser = await User.findById(userId);
+        if(!myUser.desiredConcerts){
+            myUser.desiredConcerts = [];
+        }
+        myUser.desiredConcerts.push(concertId);
+        const updatedUser = await User.findByIdAndUpdate(userId, myUser, {new: true});
+        return res.status(200).json(updatedUser);
+    } catch (error) {
+        return res.status(500).json(error);
+    }
+}
+
+const addVip = async(req, res) => {
+    try {
+        const {userId,fanClubId} = req.body;
+        const myUser = await User.findById(userId);
+        myUser.idFanClub = fanClubId;
+        const updatedUser = await User.findByIdAndUpdate(userId, myUser, {new: true});
+        return res.status(200).json(updatedUser);
+    } catch (error) {
+        return res.status(500).json(error);
+    }
+}
+
+const getUsers = async(req, res) => {
+    try {        
+        const allUsers = await User.find();
+        res.status(200).json(allUsers);
+    } catch (error) {
+        return res.status(500).json(error);
+    }
+};
+
 //---------------------------------OUTPUT---------------------------------
 
-
-module.exports = {register, login}
+module.exports = {
+    register, 
+    login, 
+    addConcert,
+    addConcertDesired,
+    addVip,
+    getUsers
+}
