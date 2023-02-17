@@ -4,11 +4,11 @@ const mongoose = require('mongoose');
 // 1 - SCHEMA
 const hallSchema = mongoose.Schema(
     {
-        name: {type:'String', required:true},
-        localization: {type:'String', required:true},
-        city: {type:'String', required:true},
-        img: {type:'String'},
-        map: {type:'String'}
+        name: {type:String, required:true},
+        localization: {type:String, required:true},
+        city: {type:String, required:true},
+        img: {type:String},
+        map: {type:String}
     },
     {timestamps:true}
 );

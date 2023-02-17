@@ -21,8 +21,21 @@ const getHallById = async(req, res) => {
     }
 };
 
+// -----------------------------------------------------------
+
+const postHalls = async (req,res) => {
+    try {
+        const halls = req.body;
+        const inserted = await Hall.insertMany(halls);
+        res.status(201).json(inserted);
+    } catch (error) {
+        return res.status(500).json(error);
+    }
+};
+
 //---------------------------------OUTPUT---------------------------------
 module.exports = {
     getHalls,
-    getHallById
+    getHallById,
+    postHalls
 }
