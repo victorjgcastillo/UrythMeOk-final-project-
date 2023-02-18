@@ -2,10 +2,10 @@ import './App.css';
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import HomePage from './pages/HomePage';
 import Slider from './components/Slider/Slider';
-import RegisterPage from './pages/RegisterPage/RegisterPage';
-import LoginPage from './pages/LoginPage/LoginPage';
 import { useState } from 'react';
 import { JwtContext } from './shared/contexts/JwtContext';
+import RegisterPage from './pages/RegisterPage/RegisterPage';
+import LoginPage from './pages/LoginPage/LoginPage';
 
 function App() {
 
