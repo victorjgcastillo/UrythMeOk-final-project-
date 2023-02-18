@@ -13,7 +13,7 @@ const getArtists = async(req, res) => {
 const getArtistById = async(req, res) => {
     try {
         const {id} = req.params;
-        const myArtist = await Artist.findById(id);
+        const myArtist = await Artist.findById(id).populate({path:'genres',model:'genre'});
         return res.status(200).json(myArtist)
     } catch (error) {
         return res.status(500).json(error);

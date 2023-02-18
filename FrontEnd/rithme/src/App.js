@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { JwtContext } from './shared/contexts/JwtContext';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
 import LoginPage from './pages/LoginPage/LoginPage';
+import ConcertsPage from './pages/ConcertsPage/ConcertsPage';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
             <Route path='/a' element={<Slider></Slider>}/>
             <Route path='/register' element={<RegisterPage/>}/>
             <Route path='/login' element={<LoginPage/>}/>
+            <Route path='/concerts' element={<ConcertsPage/>}/>
           </Routes> 
       </Router>
     </div>
