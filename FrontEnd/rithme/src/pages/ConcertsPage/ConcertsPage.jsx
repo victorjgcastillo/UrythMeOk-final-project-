@@ -2,10 +2,35 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ConcertsPage.scss';
+import { motion } from 'framer-motion';
+import "../../styles/Slider.css"        
+import ConcertGallery from '../../components/ConcertGallery/ConcertGallery';
 
 export default function ConcertsPage() {
 
     const [concerts, setConcerts] = useState([]);
+
+    const dateSeparator = (array) => {
+        let date1;
+        let result = [[]];
+        let pos = 0;
+        for (let i = 0; i < array.length; i++) {
+            const item = array[i];
+            if (i===0){
+                date1 = item.date;
+                result[0].push(item);
+            } else {
+                if (item.date === date1){
+                    result[pos].push(item);
+                } else {
+                    pos++;
+                    result[pos]=[item];
+                    date1 = item.date;
+                }
+            }
+        }
+        return result;
+    }
 
     useEffect(() => {
         axios('http://localhost:5000/concerts')
@@ -17,11 +42,11 @@ export default function ConcertsPage() {
                 return {...concert, dateFormat: dateObject};
             });
             const concertsOrdered = concertsMap.sort((a,b)=> a.dateFormat - b.dateFormat);
-            setConcerts(concertsOrdered);
-            console.log(concertsOrdered);
+            const concertsDateArray= dateSeparator(concertsOrdered);
+            setConcerts(concertsDateArray);
         })
     }, [])
-    
+
     return (
     <div className='concertsPage'>
         <div className='header'>
@@ -33,23 +58,13 @@ export default function ConcertsPage() {
                 <button className="concerts-button">Eventos</button>
                 <button className="concerts-button">Salas</button>
             </div>
-            <div className='concerts-info__container'>
-                {concerts.map((concert,id)=> (
-                        <div className='concert' key={id}>
-                            <div className='concert__img'>
-                                <img alt={'img'+id} src={concert.artists[0].img}></img>
-                            </div>
-                            <div className='concert__info'>
-                                <h3>{concert.hall.name}</h3>
-                                <h2>{concert.artists[0].name}</h2>
-                                {concert.artists[0].genres.map((genre,id)=>(
-                                    <p>{genre}</p>
-                                ))}
-                                <Link to='/buy'><button>Comprar</button></Link>
-                            </div>
-                        </div>
-                ))}
-            </div>
+            <motion.div className="slider-container">
+                <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-545.746}}>
+                    {concerts.map((concertsArray)=> (
+                        <ConcertGallery className='concerts-container' concerts={concertsArray}/>
+                    ))}
+                </motion.div>
+            </motion.div>
         </div>
         <div className='footer'>
             Aqui estara el nav

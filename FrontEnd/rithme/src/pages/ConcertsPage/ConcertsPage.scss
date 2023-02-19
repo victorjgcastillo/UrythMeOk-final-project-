@@ -29,8 +29,19 @@
         justify-content: flex-start;
         align-items: center;
 
+        .slider-container{
+            border: none;
+            height: 84%;
+            width: 100%;
+        }
+    
+        .slider{
+            margin: 0px 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        
         .concerts-button__container{
-
 
             .concerts-button {
                 width: 70pt;
@@ -38,25 +49,12 @@
                 border-style: none;
                 font-size: 12pt;
                 margin: 20px;
-                background-color: #38dbb8;
+                background-color: $theme-color;
                 color: white;
                 border-radius: 12pt;
             }
         }
 
-        .concerts-info__container{
-            width: 100%;
-
-            .concert__img{
-                width: 100px;
-                height: 100px;
-
-                img{
-                    width: 100px;
-                    height: 100px;
-                }
-            }
-        }
     }
 
     .footer{
