@@ -1,9 +1,8 @@
 import './App.css';
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
-import HomePage from './pages/HomePage';
-import ArtistDetailsPage from './pages/ArtistDetailsPage';
-import TicketsPage from './pages/TicketsPage';
-// import HomePage from './pages/HomePage/HomePage';
+import ArtistDetailsPage from './pages/ArtistDetailPage/ArtistDetailsPage';
+import TicketsPage from './pages/TicketsPage/TicketsPage';
+import HomePage from './pages/HomePage/HomePage';
 import Slider from './components/Slider/Slider';
 import { useState } from 'react';
 import { JwtContext } from './shared/contexts/JwtContext';
@@ -23,7 +22,7 @@ function App() {
 
   return (
     <JwtContext.Provider value={{ jwt, setJwt }}>
-    // <ChakraProvider>
+    {/* <ChakraProvider> */}
       <div className="App">
         <Router>
             <Routes>
@@ -34,14 +33,13 @@ function App() {
               <Route path='/artists' element={<ArtistsPage/>}/>
               <Route path='/artistDetails' element={<ArtistDetailsPage></ArtistDetailsPage>}/>
               <Route path='/tickets' element={<TicketsPage></TicketsPage>}/>
-
               <Route path='/navbar' element={<Navbar></Navbar>}/>
               <Route path='/artist' element={<Artist></Artist>}/>
             </Routes> 
         </Router>
       </div>
+    {/* </ChakraProvider> */}
     </JwtContext.Provider>
-    // </ChakraProvider>
   );
 }
 

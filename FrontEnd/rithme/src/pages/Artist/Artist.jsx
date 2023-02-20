@@ -27,7 +27,7 @@ function ArtistInfo({ artistID }) {
 
             <div className="artist">
 
-            <ArtistCard></ArtistCard>
+            {/* <ArtistCard></ArtistCard> */}
 
                 <img src={artists.img} alt={artists.name} className="artists__name" />
 
