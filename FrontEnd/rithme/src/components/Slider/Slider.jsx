@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
 import "../../styles/Slider.css"
-
+import { AspectRatio } from '@chakra-ui/react'
 
 
 
@@ -31,7 +31,11 @@ export default function Slider() {
     }, [])
    
     return (
+
+    
+
     <motion.div className="slider-container">
+
     <div className="slider-h1">
     <h1>ARTISTAS</h1>
     </div>

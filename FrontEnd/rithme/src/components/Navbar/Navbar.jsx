@@ -1,5 +1,7 @@
 import { IoHomeOutline, IoPersonOutline, IoSearchOutline, IoTicketOutline, IoSettingsOutline } from "react-icons/io5";
 import './Navbar.css'
+import { Link } from 'react-router-dom';
+
 
 export default function Navbar() {
 
@@ -47,12 +49,14 @@ export default function Navbar() {
                 </li>
                 
                 <li className="list">
-                    <a href="#" className='link'>
+                    <Link to="/">
+                    <a href="#" className='link' Link>
                         <span className="icon">
                         <IoHomeOutline></IoHomeOutline>
                         </span>
                         <span className="text">Home</span>
                     </a>
+                    </Link>
                 </li>
 
                 <li className="list">
