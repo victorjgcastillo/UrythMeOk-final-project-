@@ -1,7 +1,7 @@
 // import axios from "axios";
 // import { useEffect, useState } from "react";
-import Header from "../components/Header/Header";
-import Slider from "../components/Slider/Slider";
+import Header from "../../components/Header/Header";
+import Slider from "../../components/Slider/Slider";
 import './HomePage.scss';
 
 export default function HomePage() {
