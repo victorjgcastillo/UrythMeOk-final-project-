@@ -1,0 +1,26 @@
+.tickets{
+    border: 2px solid red;
+    &__tickets__imgContainer{
+        display: flex;
+    }
+
+    &__datos{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__compra{
+        display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    }
+
+    &__compra button{
+        width: 77.5pt;
+        height: 40pt;
+        border-radius: 8pt;
+        border-style: groove;
+        background-color: aquamarine;
+    }
+}

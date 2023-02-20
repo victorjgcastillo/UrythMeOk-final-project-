@@ -6,6 +6,10 @@
     position: relative;
     min-width: 300px;
     border: 0px solid #000;
+    
+    h1{
+        color: #1cdb1c;
+    }
   }
   
   .noot-1,
@@ -32,13 +36,13 @@
   
   .noot-3 {
     top: 90px;
-    left: 60%;
+    left: 50%;
     animation-delay: 1.5s;
   }
   
   .noot-4 {
     top: 40px;
-    left: 90%;
+    left: 80%;
     animation-delay: 2s;
   }
   
