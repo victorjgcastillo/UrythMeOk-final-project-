@@ -54,9 +54,9 @@ export default function ConcertsPage() {
         </div>
         <div className='main'>
             <div className="concerts-button__container">
-                <button className="concerts-button">Artistas</button>
-                <button className="concerts-button">Eventos</button>
-                <button className="concerts-button">Salas</button>
+                <Link to='/artists'><button className="concerts-button">Artists</button></Link>
+                <button className="concerts-button selected">Events</button>
+                <Link to='/halls'><button className="concerts-button">Halls</button></Link>
             </div>
             <motion.div className="slider-container">
                 <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-545.746}}>

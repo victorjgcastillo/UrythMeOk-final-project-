@@ -7,6 +7,7 @@ import { JwtContext } from './shared/contexts/JwtContext';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import ConcertsPage from './pages/ConcertsPage/ConcertsPage';
+import ArtistsPage from './pages/ArtistsPage/ArtistsPage';
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
             <Route path='/register' element={<RegisterPage/>}/>
             <Route path='/login' element={<LoginPage/>}/>
             <Route path='/concerts' element={<ConcertsPage/>}/>
+            <Route path='/artists' element={<ArtistsPage/>}/>
+
           </Routes> 
       </Router>
     </div>

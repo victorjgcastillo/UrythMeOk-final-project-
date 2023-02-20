@@ -3,7 +3,7 @@ const Artist = require('../models/artist.model');
 
 const getArtists = async(req, res) => {
     try {        
-        const allArtist = await Artist.find();
+        const allArtist = await Artist.find().populate({path:'genres',model:'genre'});
         res.status(200).json(allArtist);
     } catch (error) {
         return res.status(500).json(error);

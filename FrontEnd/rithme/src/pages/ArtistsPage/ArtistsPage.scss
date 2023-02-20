@@ -1,6 +1,6 @@
 @import '../../styles/_colors.scss';
 
-.concertsPage{
+.artistsPage{
     width: 100%;
     height: 100vh;
 
@@ -41,9 +41,9 @@
             flex-direction: column;
         }
         
-        .concerts-button__container{
+        .artists-button__container{
 
-            .concerts-button {
+            .artists-button {
                 &.selected{
                     background-color: $theme-color;
                     border: solid 3px $theme-selected;

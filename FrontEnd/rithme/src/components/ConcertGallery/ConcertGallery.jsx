@@ -13,11 +13,12 @@ export default function ConcertGallery({concerts}) {
                 </div>
                 <div className='concert__info'>
                     <div className='concert__info--1'>
-                        <h3>{concert.hall.name} - {concert.hall.city}</h3>
+                        <h3 className='concert__info--1-hall'>{concert.hall.name}</h3>
+                        <h3 className='concert__info--1-city'>{concert.hall.city}</h3>
                     </div>
                     <div className='concert__info--2'>
                         <h2>{concert.artists[0].name}</h2>
-                        <Link to='/buy'><button>Comprar</button></Link>
+                        <Link to={'/buy/'+concert._id} ><button>Buy</button></Link>
                     </div>
                     <div className='concert__info--3'>
                         <div className='artist_genres'>
