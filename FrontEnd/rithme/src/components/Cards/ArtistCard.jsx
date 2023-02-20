@@ -1,20 +1,18 @@
-import {CardModule} from 'primeng/card';
+// import {CardModule} from 'primeng/card';
 
+// export default function ArtistCard() {
 
+//     return (
 
-export default function ArtistCard() {
+//         <p-card>
+//         <ng-template pTemplate="header">
+//             Header content here
+//         </ng-template>
+//         Body Content
+//         <ng-template pTemplate="footer">
+//             Footer content here
+//         </ng-template>
+//     </p-card>
 
-    return (
-
-        <p-card>
-        <ng-template pTemplate="header">
-            Header content here
-        </ng-template>
-        Body Content
-        <ng-template pTemplate="footer">
-            Footer content here
-        </ng-template>
-    </p-card>
-
-    )
-}
+//     )
+// }

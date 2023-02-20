@@ -50,13 +50,13 @@ export default function ConcertsPage() {
     return (
     <div className='concertsPage'>
         <div className='header'>
-            <h1>Concerts</h1>
+            <h1>Conciertos</h1>
         </div>
         <div className='main'>
             <div className="concerts-button__container">
-                <Link to='/artists'><button className="concerts-button">Artists</button></Link>
-                <button className="concerts-button selected">Events</button>
-                <Link to='/halls'><button className="concerts-button">Halls</button></Link>
+                <Link to='/artists'><button className="concerts-button">Artistas</button></Link>
+                <button className="concerts-button selected">Eventos</button>
+                <Link to='/halls'><button className="concerts-button">Salas</button></Link>
             </div>
             <motion.div className="slider-container">
                 <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-545.746}}>

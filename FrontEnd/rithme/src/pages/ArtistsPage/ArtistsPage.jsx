@@ -14,7 +14,7 @@ export default function ArtistsPage() {
         axios('http://localhost:5000/artists')
         .then(res => {
             const artists = res.data;
-            console.log(artists)
+            // console.log(artists)
             setArtists(artists);
         })
     }, [])
@@ -22,13 +22,13 @@ export default function ArtistsPage() {
     return (
     <div className='artistsPage'>
         <div className='header'>
-            <h1>Artists</h1>
+            <h1>Artistas</h1>
         </div>
         <div className='main'>
             <div className="artists-button__container">
-                <button className="artists-button selected">Artists</button>
-                <Link to='/concerts'><button className="artists-button">Events</button></Link>
-                <Link to='/halls'><button className="artists-button">Halls</button></Link>
+                <button className="artists-button selected">Artistas</button>
+                <Link to='/concerts'><button className="artists-button">Eventos</button></Link>
+                <Link to='/halls'><button className="artists-button">Salas</button></Link>
             </div>
             <motion.div className="slider-container">
                 <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-545.746}}>
