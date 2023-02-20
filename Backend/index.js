@@ -34,6 +34,11 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+app.use((req, res, next) => {
+    console.log(`+ Nueva peticion ${req.method} ${req.url}`);
+    next();
+});
+
 app.use('/halls', hallsRouter);
 app.use('/fanclub', fanClubRouter);
 app.use('/users', userRouter);
