@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+
+.font-face-gm {
+  font-family: "RedHat";
+  font-family: "Raleway";
+  font-family: "Oxygen";
+}

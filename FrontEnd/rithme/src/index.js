@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './fonts/RedHat/static/RedHatDisplay-Regular.ttf';
+import './fonts/Raleway/static/Raleway-Regular.ttf';
+import './fonts/Oxygen/Oxygen-Regular.ttf';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
