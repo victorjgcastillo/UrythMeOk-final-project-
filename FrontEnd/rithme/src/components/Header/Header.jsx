@@ -3,13 +3,9 @@ import './Header.scss';
 
 export default function Header() {
 
-  
   return (
-    <h1>Hupgradify</h1>
-
-    )
-{/* <div class="muzieknootjes">
-
+ <div class="muzieknootjes">
+<h1>Hupgradify</h1>
       
     <div class="noot-1">
         &#9835; &#9833;
@@ -25,8 +21,9 @@ export default function Header() {
 
     <div class="noot-4">
       &#9834;
+
     </div>
 
-</div> */}
-
+</div> 
+)
 }
