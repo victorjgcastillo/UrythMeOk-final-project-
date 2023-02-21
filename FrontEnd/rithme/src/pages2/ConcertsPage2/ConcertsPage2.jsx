@@ -1,10 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './ConcertsPage.scss';
+import './ConcertsPage2.scss';
 import "../../styles/Slider.scss"        
 import ConcertGallery from '../../components/ConcertGallery/ConcertGallery';
-import Header from '../../components/Header/Header';
+// import Header from '../../components/Header/Header';
 
 export default function ConcertsPage() {
 

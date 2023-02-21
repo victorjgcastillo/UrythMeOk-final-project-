@@ -13,7 +13,7 @@ const router = express.Router();
 router.get('/', getConcerts);
 router.get('/:id', getConcertById);
 router.post('/', postConcert);
-router.put('/add-ticket/:id', addTicketConcert);
+router.put('/add-ticket', addTicketConcert);
 
 //---------------------------------OUTPUT---------------------------------
 module.exports = router;

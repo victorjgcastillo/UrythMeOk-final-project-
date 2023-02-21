@@ -1,14 +1,36 @@
-
+@import '../../styles/_colors.scss';
   
-  .muzieknootjes {
+  .header {
     display: block;
     margin: auto;
+    
     position: relative;
     min-width: 300px;
     border: 0px solid #000;
+
+    &-button__container{
+
+      &.concerts-button {
+          &.selected{
+              background-color: $theme-color;
+              border: solid 4px $theme-selected;
+          }
+  
+          width: 70pt;
+          height: 31pt;
+          border-style: none;
+          font-size: 12pt;
+          margin: 20px;
+          background-color: $theme-color;
+          color: white;
+          border-radius: 12pt;
+      }
+  }
     
-    h1{
+    &__Title{
         color: #1cdb1c;
+        display: inline-block;
+        margin-top: 1rem;
     }
   }
   
@@ -23,26 +45,28 @@
   }
   
   .noot-1 {
-    top: 60px;
+    top: 40px;
     left: 0;
-    animation-delay: 0.5s;
+    animation-delay: 1.5s;
   }
   
   .noot-2 {
-    top: 30px;
+    top: 49px;
     left: 30%;
+    bottom: 50px;
     animation-delay: 1s;
   }
   
   .noot-3 {
-    top: 90px;
-    left: 50%;
+    top: 50px;
+    left: 69%;
     animation-delay: 1.5s;
   }
   
   .noot-4 {
-    top: 40px;
-    left: 80%;
+    top: 15px;
+    left: 82%;
+    bottom: 50px;
     animation-delay: 2s;
   }
   

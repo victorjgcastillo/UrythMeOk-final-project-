@@ -1,5 +1,7 @@
+@import '../../styles/_colors.scss';
+
 .home {
-    background: linear-gradient(177deg, #005eb8 0%, #00ff88 64%);
+    background: $background;
     // position: fixed; 
     top: 0; 
     left: 0; 
@@ -22,11 +24,9 @@
         width: 70pt;
         height: 31pt;
         border-style: none;
-        font-family: "Oxygen";
-        font-weight: light;
-        font-size: 10pt;
+        font-size: 12pt;
         margin: 20px;
-        background-color: #38dbb8;
+        background-color: $theme-color;
         color: white;
         border-radius: 12pt;
     }

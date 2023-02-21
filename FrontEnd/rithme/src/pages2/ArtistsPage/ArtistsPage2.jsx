@@ -1,12 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './ArtistsPage.scss';
-import "../../styles/Slider.scss"        
+import './ArtistsPage2.scss';
+import { motion } from 'framer-motion';
+import "../../styles/Slider.css"        
 import ArtistGallery from '../../components/ArtistGallery/ArtistsGallery';
-import Header from '../../components/Header/Header';
 
-export default function ArtistsPage() {
+export default function ArtistsPage2() {
 
     const [artists, setArtists] = useState([]);
 
@@ -14,25 +14,27 @@ export default function ArtistsPage() {
         axios('http://localhost:5000/artists')
         .then(res => {
             const artists = res.data;
-            console.log(artists)
+            // console.log(artists)
             setArtists(artists);
         })
     }, [])
 
     return (
     <div className='artistsPage'>
-        <Header></Header>
+        <div className='header'>
+            <h1>Artistas</h1>
+        </div>
         <div className='main'>
             <div className="artists-button__container">
                 <button className="artists-button selected">Artistas</button>
-                <Link to='/concerts'><button className="artists-button">Conciertos</button></Link>
+                <Link to='/concerts'><button className="artists-button">Eventos</button></Link>
                 <Link to='/halls'><button className="artists-button">Salas</button></Link>
             </div>
-            <div className="slider-container">
-                <div className="slider">
+            <motion.div className="slider-container">
+                <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-545.746}}>
                     <ArtistGallery artists={artists}/>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </div>
         <div className='footer'>
             Aqui estara el nav

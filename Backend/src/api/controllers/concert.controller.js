@@ -33,14 +33,13 @@ const getConcertById = async(req, res) => {
 
 const addTicketConcert = async(req, res) => {
     try {
-        const {id} = req.params;
-        const {ticketId} = req.body;
-        const myConcert = await Concert.findById(id);
+        const {concertId, ticketId} = req.body;
+        const myConcert = await Concert.findById(concertId);
         if(!myConcert.tickets){
             myConcert.tickets = [];
         }
         myConcert.tickets.push(ticketId);
-        const updatedConcert = await Concert.findByIdAndUpdate(id, myConcert, {new: true});
+        const updatedConcert = await Concert.findByIdAndUpdate(concertId, myConcert, {new: true});
         return res.status(200).json(updatedConcert);
     } catch (error) {
         return res.status(500).json(error);

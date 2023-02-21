@@ -1,25 +1,26 @@
+import { Link } from 'react-router-dom';
 import './Header.scss';
 
 
 export default function Header() {
 
   return (
- <div class="muzieknootjes">
-<h1>Hupgradify</h1>
+ <div className="header">
+   <Link to={'/'}><h1 className="header__Title">Hupgradify</h1></Link>
       
-    <div class="noot-1">
+    <div className="noot-1">
         &#9835; &#9833;
     </div>
 
-    <div class="noot-2">
+    <div className="noot-2">
       &#9833;
     </div>
 
-    <div class="noot-3">
+    <div className="noot-3">
       &#9839; &#9834;
     </div>
 
-    <div class="noot-4">
+    <div className="noot-4">
       &#9834;
 
     </div>
