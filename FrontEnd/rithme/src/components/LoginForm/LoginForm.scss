@@ -58,6 +58,12 @@
         }
     }
     
+    .cuenta-nueva{
+        &:hover{
+            text-decoration: underline;
+            cursor:pointer;
+        }
+    }
 
     .form-submit{
         height: 18%;

@@ -5,12 +5,14 @@ const {
     addTicket,
     addConcertDesired,
     addVip,
-    getUsers
+    getUsers,
+    getUserById
 } = require('../controllers/user.controller');
 
 const router = express.Router();
 
-router.get('/', getUsers)
+router.get('/', getUsers);
+router.get('/:id', getUserById);
 
 router.post('/register', register);
 router.post('/login', login);

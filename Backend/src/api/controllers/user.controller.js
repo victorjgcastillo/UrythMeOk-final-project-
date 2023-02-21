@@ -97,6 +97,18 @@ const getUsers = async(req, res) => {
     }
 };
 
+
+const getUserById = async(req, res) => {
+    try {
+        const {id} = req.params;
+        const user = await User.findById(id)
+        .populate({path:'tickets', model:'ticket'});
+        return res.status(200).json(user);
+    } catch (error) {
+        return res.status(500).json(error);
+    }
+};
+
 //---------------------------------OUTPUT---------------------------------
 
 module.exports = {
@@ -105,5 +117,6 @@ module.exports = {
     addTicket,
     addConcertDesired,
     addVip,
-    getUsers
+    getUsers,
+    getUserById
 }
