@@ -16,7 +16,6 @@ export default function HomePage() {
         <Link to='/concerts'><button className="home__button" >Conciertos</button></Link>
         <Link to='/halls'><button className="home__button">Salas</button></Link>
         </div>
-
                 <div className="home__title">
                     <h1 className="">¡Bienvenido Paco!</h1>
                     <h2 className="">¿Qué te apetece escuchar?</h2>

@@ -47,7 +47,7 @@ app.use('/concerts', concertRouter);
 app.use('/genres', genresRouter);
 app.use('/artists', artistRouter);
 
-app.listen(5000, () => console.log('listening on port', PORT));
+app.listen(PORT, () => console.log('listening on port', PORT));
 
 
 

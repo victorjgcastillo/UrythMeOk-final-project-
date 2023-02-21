@@ -49,7 +49,9 @@ export default function ConcertsPage() {
 
     return (
     <div className='concertsPage'>
-        <Header></Header>
+        <div className='header'>
+            <h1>Upgradify</h1>
+        </div>
         <div className='main'>
             <div className="concerts-button__container">
                 <Link to='/artists'><button className="concerts-button">Artistas</button></Link>

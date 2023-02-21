@@ -18,26 +18,17 @@ export default function Navbar() {
         item.addEventListener('click', activeLink));
 
     return(
-
-        <div className="homePage">
-
-        <div className="main">
-        </div>
-
-        <div className="footer">
-
-
         <div className="navbarcont">
 
         <div className="navbar">
             <ul className='ul'>
                 <li className="list active">
-                    <a href="#" className='link'>
+                    <Link to="/login">
                         <span className="icon">
                         <IoPersonOutline></IoPersonOutline>
                         </span>
                         <span className="text">Perfil</span>
-                    </a>
+                    </Link>
                 </li>
                 <li className="list">
                     <a href="#" className='link'>
@@ -83,9 +74,6 @@ export default function Navbar() {
         </div>
 
         </div>
-        
-        </div>  
-</div>
         
     )
     

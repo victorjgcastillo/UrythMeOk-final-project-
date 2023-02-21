@@ -12,9 +12,10 @@ import ArtistsPage from './pages/ArtistsPage/ArtistsPage';
 import Navbar from './components/Navbar/Navbar';
 import Artist from './pages/Artist/Artist';
 import * as React from 'react';
+import PayPage from './pages/PayPage/PayPage';
+import RequireAuth from './components/RequireAuth/RequireAuth';
+import LogOut from './components/LogOut/LogOut';
 import HallsPage from './pages/HallsPage/HallsPage';
-// import { ChakraProvider } from '@chakra-ui/react';
-
 
 function App() {
 
@@ -34,6 +35,9 @@ function App() {
               <Route path='/artistDetails' element={<ArtistDetailsPage></ArtistDetailsPage>}/>
               <Route path='/tickets' element={<TicketsPage></TicketsPage>}/>
               <Route path='/navbar' element={<Navbar></Navbar>}/>
+              <Route path='/artist/:id' element={<Artist></Artist>}/>
+              <Route path='/concerts/buy/:concertId' element={<RequireAuth><PayPage></PayPage></RequireAuth>}/>
+              <Route path='/logout' element={<LogOut></LogOut>}/>
               <Route path='/artist' element={<Artist></Artist>}/>
               <Route path='/halls' element={<HallsPage></HallsPage>}/>
             </Routes> 
