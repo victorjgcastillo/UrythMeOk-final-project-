@@ -16,6 +16,7 @@ import PayPage from './pages/PayPage/PayPage';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import LogOut from './components/LogOut/LogOut';
 import HallsPage from './pages/HallsPage/HallsPage';
+import ConcertsPage2 from './pages2/ConcertsPage2/ConcertsPage2';
 
 function App() {
 
@@ -40,6 +41,8 @@ function App() {
               <Route path='/logout' element={<LogOut></LogOut>}/>
               <Route path='/artist' element={<Artist></Artist>}/>
               <Route path='/halls' element={<HallsPage></HallsPage>}/>
+
+              <Route path='/concerts2' element={<ConcertsPage2/>}/>
             </Routes> 
         </Router>
       </div>
