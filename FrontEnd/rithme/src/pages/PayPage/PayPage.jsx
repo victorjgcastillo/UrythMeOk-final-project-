@@ -77,7 +77,7 @@ export default function PayPage() {
                     console.log(error.response.data.message)
                 })
 
-                navigate("/my-concerts/"+userId);
+                navigate("/concerts/buy2");
 
             }).catch((error)=> {
                 console.log(error.response.data.message)
