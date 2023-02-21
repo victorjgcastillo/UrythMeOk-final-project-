@@ -7,11 +7,14 @@ export default function ArtistCard({concertId}) {
 
     const [concertCard, setConcertCard] = useState([]);
     const [artist, setArtist] = useState([]);
+    const {id} = useParams();
 
     const getInfo = async()=>{
-        const res = await axios(`http://localhost:5000/concerts/${concertId}`);
+        // const res = await axios(`http://localhost:5000/concerts/${concertId}`);
+        const res = await axios(`http://localhost:5000/artists/${id}`);
         setConcertCard(res.data);
-        setArtist(res.data.artists[0]);
+        setArtist(res.data);
+        // setArtist(res.data.artists[0]);
     }
 
     useEffect(() => {
@@ -29,7 +32,7 @@ export default function ArtistCard({concertId}) {
                     <h2 className="card__artist--name">{artist.name}</h2>
                     <p className="cardartist--date">{concertCard.date}</p>
                     <p className="cardartist--time">{concertCard.time}</p>
-                    <p className="cardartist--price">{concertCard.price}€</p>
+                    <p className="cardartist--price">30€</p>
                 </div>
 
             </div>

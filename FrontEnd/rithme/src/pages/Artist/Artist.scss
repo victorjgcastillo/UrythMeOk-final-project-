@@ -1,0 +1,36 @@
+.body {
+    min-height: 100vh; /* Ajusta la altura mínima de la página al tamaño de la ventana del navegador */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: scroll;
+  
+    &__header {
+      height: 10%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    }
+  
+    &__content {
+      &--p {
+        margin: 30px;
+        text-align: justify;
+        font-size: 10pt;
+      }
+    }
+  
+    &__footer {
+      height: 15%;
+      width: 100%;
+      box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+  }
