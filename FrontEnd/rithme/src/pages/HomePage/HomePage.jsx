@@ -10,15 +10,15 @@ export default function HomePage() {
     return (
 
         <div className="home"> 
-            <Header></Header>
-            <div className="home__container--buttons">
-                <Link to='concerts'><button className="home__button">Conciertos</button></Link>
-                <button className="home__button">Amigos</button>
-                <button className="home__button">Fan Club</button>
-            </div>
+        <Header></Header>
+        <div className="home__container--buttons">
+        <Link to='/artists'><button className="home__button">Artistas</button></Link>
+        <Link to='/concerts'><button className="home__button" >Conciertos</button></Link>
+        <Link to='/halls'><button className="home__button">Salas</button></Link>
+        </div>
                 <div className="home__title">
-                    <h1 className="">¡Hola Mundo!</h1>
-                    <h2 className="">¿Qué concierto te apetece?</h2>
+                    <h1 className="">¡Bienvenido Paco!</h1>
+                    <h2 className="">¿Qué te apetece escuchar?</h2>
                 </div>
                 <div className="home__categories">
                 <div className="home__categories--section">
