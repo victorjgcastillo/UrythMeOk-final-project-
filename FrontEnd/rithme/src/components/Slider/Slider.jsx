@@ -2,13 +2,14 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
 import "../../styles/Slider.scss"
+import { Link } from "react-router-dom";
 // import { AspectRatio } from '@chakra-ui/react'
 
 
 
 export default function Slider() {
 
-    const [categories, setCategories] = useState([]);
+    const [artists, setArtist] = useState([]);
     const [ genres, setGenres] = useState([]);
     const [ halls, setHalls] = useState([]);
 
@@ -16,7 +17,7 @@ export default function Slider() {
         axios('http://localhost:5000/artists')
         .then(res => {
             console.log(res.data);
-            setCategories(res.data);
+            setArtist(res.data);
         })
         axios('http://localhost:5000/genres')
         .then(res => {
@@ -36,44 +37,51 @@ export default function Slider() {
 
     <motion.div className="slider">
 
-    <div className="slider__h1">
-    <h1>ARTISTAS</h1>
-    </div>
-    <motion.div className="slider__motion" drag='x' dragConstraints={{right: 0, left:-3512.91}}>
-    
-    {categories.map((categorie, id)=> (
-        
-    <motion.div className="slider__item" key={id}>
-            <img src={categorie.img} alt={categorie.name} className="slider__img" />                  
-    </motion.div>
-    ))}
-    </motion.div>
+        <div className="slider__cont">
+            <h1>ARTISTAS</h1>
+
+            <motion.div className="slider__motion" drag='x' dragConstraints={{right: 0, left:-3512.91}}>
+            
+                {artists.map((artist, id)=> (
+                    
+                <motion.div className="slider__item" key={id}>
+                        <img src={artist.img} alt={artist.name} className="slider__img" />
+                        <Link to={`/artist/${artist._id}`}><span className="slider__name">{artist.name}</span></Link>                 
+                </motion.div>
+                ))}
+
+            </motion.div>
+            </div>
 
 
-    <div className="slider__h1">
-    <h1>ESTILOS</h1>
-    </div>
-    <motion.div className="slider__motion" drag='x' dragConstraints={{right: 0, left:-1212.33}}>
+        <div className="slider__cont">
+            <h1>ESTILOS</h1>
+            <motion.div className="slider__motion" drag='x' dragConstraints={{right: 0, left:-1212.33}}>
 
-    {genres.map((genre, id)=> (
-    <motion.div className="slider__item" key={id}>        
-            <img src={genre.img} alt={genre.name} className="slider__img" />                  
-    </motion.div>
-    ))}
-    </motion.div>
+                {genres.map((genre, id)=> (
+                <motion.div className="slider__item" key={id}>        
+                        <img src={genre.img} alt={genre.name} className="slider__img" />                  
+                </motion.div>
+                ))}
+
+            </motion.div>
+        </div>
 
 
-    <div className="slider__h1">
-    <h1>SALAS</h1>
-    </div>
-    <motion.div className="slider__motion" drag='x' dragConstraints={{right: 0, left:-1212.33}}>
 
-    {halls.map((halls, id)=> (
-    <motion.div className="slider__item" key={id}>        
-            <img src={halls.img} alt={halls.name} className="slider__img" />                  
-    </motion.div>
-    ))}
-    </motion.div>
+        <div className="slider__cont">
+            <h1>SALAS</h1>
+            <motion.div className="slider__motion" drag='x' dragConstraints={{right: 0, left:-1212.33}}>
+
+                {halls.map((halls, id)=> (
+                <motion.div className="slider__item" key={id}>        
+                        <img src={halls.img} alt={halls.name} className="slider__img" />                  
+                </motion.div>
+                ))}
+
+            </motion.div>
+        </div>
+
     </motion.div>
 )
 }

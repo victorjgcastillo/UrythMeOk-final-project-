@@ -44,6 +44,7 @@ export default function HallsPage() {
             </div> 
             <div className="footer">
                 <Navbar/>
+
             </div>
         </div>
     )

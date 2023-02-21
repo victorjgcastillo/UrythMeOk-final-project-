@@ -9,11 +9,10 @@ export default function LoginPage() {
     
     const navigate = useNavigate();    
     const user = JSON.parse(localStorage.getItem('user'));
-    
 
     useEffect(()=>{
         if(user){
-            navigate("/my-concerts/"+user._id);
+            navigate("/profile");
         }
     },[])
 

@@ -19,6 +19,7 @@ import MyConcertsPage from './pages/MyConcertsPage/MyConcertsPage';
 import MyConcertPage from './pages/MyConcertPage/MyConcertPage';
 import AfterPayPage from './pages/AfterPayPage/AfterPayPage';
 import TicketsDetailsPage from './pages/TicketsDetailPage/TicketsDetailsPage';
+import ProfilePage from './pages/ProfilePage/ProfilePage';
 
 function App() {
 
@@ -43,13 +44,15 @@ function App() {
               <Route path='/artist/:id' element={<Artist></Artist>}/>
               <Route path='/artist' element={<Artist></Artist>}/>
               
-              <Route path='/concerts/:id' element={<TicketsPage></TicketsPage>}/>
               <Route path='/concerts/buy/:concertId' element={<RequireAuth><PayPage></PayPage></RequireAuth>}/>
               <Route path='/concerts/buy2' element={<RequireAuth><AfterPayPage/></RequireAuth>}/> 
+              <Route path='/concerts/:id' element={<TicketsPage></TicketsPage>}/>
+
+              <Route path='/profile' element={<RequireAuth><ProfilePage/></RequireAuth>}/>
 
               <Route path='/my-concerts/tickets/:id' element={<RequireAuth><MyConcertPage/></RequireAuth>}/>
               <Route path='/my-concerts-detail/:id' element={<TicketsDetailsPage/>}/>
-              <Route path='/my-concerts/:id' element={<RequireAuth><MyConcertsPage/></RequireAuth>}/>
+              <Route path='/my-concerts' element={<RequireAuth><MyConcertsPage/></RequireAuth>}/>
 
             </Routes> 
         </Router>

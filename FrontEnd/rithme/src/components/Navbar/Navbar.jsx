@@ -22,24 +22,8 @@ export default function Navbar() {
 
         <div className="navbar">
             <ul className='ul'>
-                <li className="list active">
-                    <Link to="/login">
-                        <span className="icon">
-                        <IoPersonOutline></IoPersonOutline>
-                        </span>
-                        <span className="text">Perfil</span>
-                    </Link>
-                </li>
-                <li className="list">
-                    <a href="#" className='link'>
-                        <span className="icon">
-                        <IoSearchOutline></IoSearchOutline>
-                        </span>
-                        <span className="text">Buscar</span>
-                    </a>
-                </li>
-                
-                <li className="list">
+
+            <li className="list">
                     <Link to="/">
                     <a href="#" className='link' Link>
                         <span className="icon">
@@ -50,13 +34,28 @@ export default function Navbar() {
                     </Link>
                 </li>
 
+
                 <li className="list">
+                    <a href="#" className='link'>
+                        <Link to="/login">
+                            <span className="icon">
+                            <IoPersonOutline></IoPersonOutline>
+                            </span>
+                            <span className="text">Perfil</span>
+                        </Link>
+                    </a>
+                </li>
+                
+
+                <li className="list">
+                <Link to="/my-concerts">
                     <a href="#" className='link'>
                         <span className="icon">
                         <IoTicketOutline></IoTicketOutline>
                         </span>
                         <span className="text">Conciertos</span>
                     </a>
+                </Link>
                 </li>
 
                 <li className="list">

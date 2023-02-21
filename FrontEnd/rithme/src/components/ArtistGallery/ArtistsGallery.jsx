@@ -13,7 +13,7 @@ export default function ArtistGallery({artists}) {
                 <div className='artist__info'>
                     <div className='artist__info--1'>
                         <h2>{artist.name}</h2>
-                        <Link to={'/artists/'+artist._id} ><button>+ Info</button></Link>
+                        <Link to={'/artist/'+artist._id} ><button>+ Info</button></Link>
                     </div>
                     <div className='artist__info--2'>
                         <div className='artist_genres'>

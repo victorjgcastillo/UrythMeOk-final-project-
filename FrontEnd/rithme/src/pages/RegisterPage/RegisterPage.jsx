@@ -13,7 +13,7 @@ export default function RegisterPage() {
 
     useEffect(()=>{
         if(user){
-            navigate("/my-concerts/"+user._id);
+            navigate("/profile");
         }
     },[])
 

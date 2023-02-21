@@ -1,7 +1,7 @@
 .card {
 position: relative;
 margin: 15px auto;
-width: 400px;
+width: 380px;
 padding: 20px;
 box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.3);
 border-radius: 15px;
@@ -34,6 +34,7 @@ background-color: white;
 
         &--name {
             margin: 15px;
+            font-size: 16pt;
         }
 
         &--date {

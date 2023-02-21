@@ -1,0 +1,12 @@
+@import '../../styles//colors';
+
+.log-out{
+    width: 90pt;
+    height: 51pt;
+    border-style: none;
+    font-size: 12pt;
+    margin: 20px;
+    background-color: $theme-color;
+    color: white;
+    border-radius: 12pt;
+}
