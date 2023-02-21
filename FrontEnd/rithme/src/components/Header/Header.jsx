@@ -6,7 +6,7 @@ export default function Header() {
 
   return (
  <div className="header">
-   <Link to={'/'}><h1 className="header__Title">Hupgradify</h1></Link>
+   <Link to={'/'}><h1 className="header__Title">Upgradify</h1></Link>
       
     <div className="noot-1">
         &#9835; &#9833;

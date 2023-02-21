@@ -33,10 +33,15 @@ export default function HallsPage() {
     {halls.map((halls, id)=> (
     <div className="halls__item" key={id}>        
             <img src={halls.img} alt={halls.name} className="halls__img" /> 
+
             <div className="halls__info">
+
             <h2>{halls.name}</h2>   
-            <h3>{halls.city}</h3>              
+
+            <h3>{halls.city}</h3>          
+
             <h3>{halls.localization}</h3>
+            
             </div>
     </div>
     ))}

@@ -1,27 +1,41 @@
 .slider{
 
     margin: 0 auto;
+    margin-top: 30px;
     overflow-x: hidden;
+
     &__motion{
         display: flex;
         cursor: grab;
         margin: 1rem 0;
     
     }
-    &__h1{
+    &__cont{
         color: white;
+        margin-bottom: 40px;
+
+        
+        h1 {
+            font-size: 16pt;
+        }
     }
 
     &__img{
-        width: 10rem;
-        height: 10rem;
+        width: 8rem;
+        height: 8rem;
         object-fit: cover;
         pointer-events: none;
-        box-shadow: 3px 3px 6px 2px #000000ad;
+        box-shadow: 1px 3px 19px 0.3px #000000ad;
+        border-radius: 10px;
     }
 
     &__item{
         margin-left: 1rem;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
         
     }
 }
