@@ -3,7 +3,6 @@ import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import ArtistDetailsPage from './pages/ArtistDetailPage/ArtistDetailsPage';
 import TicketsPage from './pages/TicketsPage/TicketsPage';
 import HomePage from './pages/HomePage/HomePage';
-import Slider from './components/Slider/Slider';
 import { useState } from 'react';
 import { JwtContext } from './shared/contexts/JwtContext';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
@@ -14,6 +13,9 @@ import Navbar from './components/Navbar/Navbar';
 import Artist from './pages/Artist/Artist';
 import * as React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
+import PayPage from './pages/PayPage/PayPage';
+import RequireAuth from './components/RequireAuth/RequireAuth';
+import LogOut from './components/LogOut/LogOut';
 
 
 function App() {
@@ -34,7 +36,9 @@ function App() {
               <Route path='/artistDetails' element={<ArtistDetailsPage></ArtistDetailsPage>}/>
               <Route path='/tickets' element={<TicketsPage></TicketsPage>}/>
               <Route path='/navbar' element={<Navbar></Navbar>}/>
-              <Route path='/artist' element={<Artist></Artist>}/>
+              <Route path='/artist/:id' element={<Artist></Artist>}/>
+              <Route path='/concerts/buy/:concertId' element={<RequireAuth><PayPage></PayPage></RequireAuth>}/>
+              <Route path='/logout' element={<LogOut></LogOut>}/>
             </Routes> 
         </Router>
       </div>

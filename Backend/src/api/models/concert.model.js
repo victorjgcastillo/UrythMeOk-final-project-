@@ -7,7 +7,7 @@ const concertSchema = mongoose.Schema(
         name: {type: String, required:true},
         date: {type: String, required:true},
         time: {type: String, required:true},
-        price: {type: mongoose.Types.Decimal128, required:true},
+        price: {type: Number, required:true},
         artists: [{type:mongoose.Schema.Types.ObjectId, ref: 'artists'}],
         hall: {type:mongoose.Schema.Types.ObjectId, ref: 'halls'},
         tickets: [{type:mongoose.Schema.Types.ObjectId, ref: 'tickets'}]

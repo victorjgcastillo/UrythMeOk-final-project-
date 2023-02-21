@@ -50,7 +50,7 @@ export default function ConcertsPage() {
     return (
     <div className='concertsPage'>
         <div className='header'>
-            <h1>Concerts</h1>
+            <h1>Upgradify</h1>
         </div>
         <div className='main'>
             <div className="concerts-button__container">

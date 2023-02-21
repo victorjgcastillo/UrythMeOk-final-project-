@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
 import "../../styles/Slider.css"
 import { AspectRatio } from '@chakra-ui/react'
+import { Link } from "react-router-dom";
 
 
 
@@ -31,28 +32,30 @@ export default function Slider() {
     }, [])
    
     return (
+        <>
+            <Link to={`/artist/${categories[0]?._id}`} >Link</Link>
+        <motion.div className="slider-container">
 
+        <div className="slider-h1">
+            <h1>ARTISTAS</h1>
+        </div>
+        <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-3512.91}}>
     
-
-    <motion.div className="slider-container">
-
-    <div className="slider-h1">
-    <h1>ARTISTAS</h1>
-    </div>
-    <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-3512.91}}>
-    
-    {categories.map((categorie, id)=> (
-        
-    <motion.div className="slider-item" key={id}>
-            <img src={categorie.img} alt={categorie.name} className="slider-img" />                  
-    </motion.div>
-    ))}
-    </motion.div>
+            {categories.map((categorie, id)=> (
+                
+                <motion.div className="slider-item" key={id}>
+                    <Link to={`/artist/${categorie._id}`}>
+                        <img src={categorie.img} alt={categorie.name} className="slider-img" />
+                        <span>{categorie.name}</span>
+                    </Link>              
+                </motion.div>
+            ))}
+        </motion.div>
 
 
-    <div className="slider-h1">
-    <h1>ESTILOS</h1>
-    </div>
+        <div className="slider-h1">
+            <h1>ESTILOS</h1>
+        </div>
     <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-1212.33}}>
 
     {genres.map((genre, id)=> (
@@ -75,5 +78,9 @@ export default function Slider() {
     ))}
     </motion.div>
     </motion.div>
+        </>
+    
+
+    
 )
 }
