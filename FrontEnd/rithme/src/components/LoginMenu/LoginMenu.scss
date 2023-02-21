@@ -1,0 +1,30 @@
+.login-menu{
+    &__container{
+        // position: fixed;
+        width: 92pt;
+        height: 103pt;
+        border-top: inset 3px rgb(15, 10, 59);
+        border-right: inset 3px rgb(15, 10, 59);
+        border-left: inset 3px rgb(15, 10, 59);
+        border-top-left-radius: 12pt;
+        border-top-right-radius: 12pt;
+        background-color:rgba(7, 3, 50, 0.729);
+        // background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &--button{
+            width: 70pt;
+            height: 31pt;
+            border-style: none;
+            font-size: 12pt;
+            background-color: #38dbb8;
+            color: white;
+            border-radius: 12pt;
+        }
+    } 
+
+}

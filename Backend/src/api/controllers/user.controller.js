@@ -12,10 +12,6 @@ const register = async(req, res, next) => {
             res.status(400).send({code:400, message:'Invalid Email'})
             return next();
         }
-        if(!validationPassword(newUser.password)){
-            res.status(400).send({code:400, message:'Invalid password'})
-            return next();
-        }
         //Check if email not repeated
         const users = await User.find({email:newUser.email})
         if(users.length > 0){
@@ -35,10 +31,13 @@ const login = async(req, res, next) => {
     try {
         const myUser = await User.findOne({email: req.body.email});
         // console.log(myUser);
-        if(bcrypt.compareSync(req.body.password, myUser.password)){
+        if (myUser === null){
+            res.status(400).send({code:400, message:'Not registered email'})
+            return next()
+        } else if (bcrypt.compareSync(req.body.password, myUser.password)){
             const token = generateSign(myUser._id, myUser.email)
             return res.status(200).json({myUser, token});
-        }else{
+        } else {
             res.status(400).send({code:400, message:'Password Error'})
             return next()
         }
