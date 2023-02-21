@@ -8,18 +8,19 @@ import './MyConcertsPage.scss';
 
 export default function MyConcertsPage() {
     
-    const {id} = useParams();
-
     const [myConcerts, setMyConcerts] = useState([]);
 
+    const user = JSON.parse(localStorage.getItem('user'));
+    const userId = user._id;
+
     const getInfo = async()=>{
-        const res = await axios(`http://localhost:5000/users/${id}`);
+        const res = await axios(`http://localhost:5000/users/${userId}`);
         setMyConcerts(res.data.tickets);
     }
 
     useEffect(() => {
         getInfo();
-    }, [id]);
+    }, []);
 
     return (
         <div className='myConcertsPage'>
@@ -28,8 +29,8 @@ export default function MyConcertsPage() {
             </div>
             <div className='main'>
                 {myConcerts.map((ticket,index)=> (
-                    <Link to={'/my-concerts-detail/'+ticket.concertId} key={index} style={{paddingLeft: 13, textDecoration: 'none'}}>
-                        <ArtistCard concertId={ticket.concertId}/>
+                    <Link to={'/my-concerts-detail/'+ticket?.concertId} key={index} style={{paddingLeft: 13, textDecoration: 'none'}}>
+                        <ArtistCard concertId={ticket?.concertId}/>
                     </Link>
                 ))}
             </div>

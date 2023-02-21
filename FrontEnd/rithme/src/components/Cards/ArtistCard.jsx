@@ -7,14 +7,14 @@ export default function ArtistCard({concertId}) {
 
     const [concertCard, setConcertCard] = useState([]);
     const [artist, setArtist] = useState([]);
-    const {id} = useParams();
+    // const {id} = useParams();
 
     const getInfo = async()=>{
-        // const res = await axios(`http://localhost:5000/concerts/${concertId}`);
-        const res = await axios(`http://localhost:5000/artists/${id}`);
+        const res = await axios(`http://localhost:5000/concerts/${concertId}`);
+        // const res = await axios(`http://localhost:5000/artists/${id}`);
         setConcertCard(res.data);
-        setArtist(res.data);
-        // setArtist(res.data.artists[0]);
+        // setArtist(res.data);
+        setArtist(res.data.artists[0]);
     }
 
     useEffect(() => {

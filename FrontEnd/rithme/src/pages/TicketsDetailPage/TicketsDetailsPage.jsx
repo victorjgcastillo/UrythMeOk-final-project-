@@ -28,7 +28,7 @@ const TicketsDetailsPage = () => {
     return(
     <div className="tickets">
         <div className='header'>
-            <HeaderAndBack back_url={'/my-concerts/'+userId} name={'Información Detallada'}/>
+            <HeaderAndBack back_url={'/my-concerts'} name={'Información Detallada'}/>
         </div>
         <div className='main'>
         <div className="tickets__imgContainer">

@@ -23,7 +23,7 @@ export default function Navbar() {
         <div className="navbar">
             <ul className='ul'>
 
-            <li className="list active">
+            <li className="list">
                     <Link to="/">
                     <a href="#" className='link' Link>
                         <span className="icon">
@@ -44,12 +44,11 @@ export default function Navbar() {
                             <span className="text">Perfil</span>
                         </Link>
                     </a>
-
                 </li>
                 
 
                 <li className="list">
-                <Link to="/concerts">
+                <Link to="/my-concerts">
                     <a href="#" className='link'>
                         <span className="icon">
                         <IoTicketOutline></IoTicketOutline>

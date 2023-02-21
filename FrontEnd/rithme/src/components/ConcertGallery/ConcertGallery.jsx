@@ -18,7 +18,7 @@ export default function ConcertGallery({concerts}) {
                     </div>
                     <div className='concert__info--2'>
                         <h2>{concert.artists[0].name}</h2>
-                        <Link to={'/buy/'+concert._id} ><button>Buy</button></Link>
+                        <Link to={'/concerts/'+concert._id} ><button>Comprar</button></Link>
                     </div>
                     <div className='concert__info--3'>
                         <div className='artist_genres'>
