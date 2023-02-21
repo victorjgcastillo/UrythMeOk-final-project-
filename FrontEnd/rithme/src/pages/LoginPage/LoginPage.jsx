@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import HeaderAndBack from '../../components/HeaderAndBack/HeaderAndBack';
 import LoginForm from '../../components/LoginForm/LoginForm';
+import Navbar from '../../components/Navbar/Navbar';
 import './LoginPage.scss';
 
 export default function LoginPage() {
@@ -25,7 +26,7 @@ export default function LoginPage() {
                 <LoginForm className='main__container'/>
             </div>
             <div className='footer'>
-                Aqui estara el nav
+                <Navbar/>
             </div>
         </div>
     );

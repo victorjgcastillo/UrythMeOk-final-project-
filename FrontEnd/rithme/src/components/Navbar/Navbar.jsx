@@ -68,7 +68,7 @@ export default function Navbar() {
                     </a>
                 </li>
 
-                <div className="indicator"></div>
+                {/* <div className="indicator"></div> */}
             </ul>
 
         </div>

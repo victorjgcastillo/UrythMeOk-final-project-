@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import HeaderAndBack from '../../components/HeaderAndBack/HeaderAndBack';
+import Navbar from '../../components/Navbar/Navbar';
 import RegisterForm from '../../components/RegisterForm/RegisterForm';
 import './RegisterPage.scss';
 
@@ -25,7 +26,7 @@ export default function RegisterPage() {
                 <RegisterForm className='main__container'/>
             </div>
             <div className='footer'>
-                Aqui estara el nav
+                <Navbar/>
             </div>
         </div>
     );

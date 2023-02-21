@@ -43,6 +43,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .navbar ul {
@@ -72,7 +73,7 @@
 .navbar ul li a .icon {
     position: relative;
     display: block;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     font-size: 1.5em;
     text-align: center;
     transition: 0.5s;
@@ -101,13 +102,15 @@
 
 .indicator {
     position: absolute;
-    top: 85%;
+    top: 86%;
     width: 70px;
     height: 70px;
-    background: #FAFA33;
+    background: #ffffff;
     border-radius: 50%;
     border: 6px solid transparent;
     transition: 0.5s;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+
 }
 
 .indicator::before {

@@ -8,7 +8,7 @@ export default function MyConcertPage() {
     
     const {id} = useParams();
 
-    const [myConcert, setMyConcert] = useState([]);
+    const [myTicket, setMyConcert] = useState([]);
 
     const getInfo = async()=>{
         const res = await axios(`http://localhost:5000/concerts/${id}`);

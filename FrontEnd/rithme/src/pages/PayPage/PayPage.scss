@@ -21,23 +21,22 @@ $background-color-pay-page:#110033;
     }
 
     .main{
-        height: 100%;
+        height: 75%;
         width: 100%;
         background: $background-color-pay-page;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        overflow: scroll;
+        padding: 50px;
 
         .pay-page__container{
+            height: max-content;
+
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
                         
-            width: 80%;
-            // height: 100%;
+            width: 100%;
 
             &--title{
                 background-color: $theme-color;
@@ -142,8 +141,8 @@ $background-color-pay-page:#110033;
     .footer{
         height: 15%;
         width: 100%;
-        background-color: $theme-color;
-        
+        background-color: $footer-color;
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
         
         .indicator{
             top:110%;

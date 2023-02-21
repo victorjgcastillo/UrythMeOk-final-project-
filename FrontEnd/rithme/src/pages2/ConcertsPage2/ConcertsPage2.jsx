@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import './ConcertsPage2.scss';
 import "../../styles/Slider.scss"        
 import ConcertGallery from '../../components/ConcertGallery/ConcertGallery';
-// import Header from '../../components/Header/Header';
+import Navbar from '../../components/Navbar/Navbar';
+import { motion } from 'framer-motion';
 
 export default function ConcertsPage() {
 
@@ -53,7 +54,7 @@ export default function ConcertsPage() {
             <h1>Upgradify</h1>
         </div>
         <div className='main'>
-            <div className="concerts-button__container">
+        <div className="concerts-button__container">
                 <Link to='/artists'><button className="concerts-button">Artistas</button></Link>
                 <button className="concerts-button selected">Conciertos</button>
                 <Link to='/halls'><button className="concerts-button">Salas</button></Link>
@@ -66,9 +67,9 @@ export default function ConcertsPage() {
                 </div>
             </div>
         </div>
-        {/* <div className='footer'>
-            Aqui estara el nav
-        </div> */}
+        <div className='footer'>
+            <Navbar/>
+        </div>
     </div>
     );
 }

@@ -56,11 +56,10 @@ function App() {
               <Route path='/onBoarding1' element={<OnBoardingFanClub2></OnBoardingFanClub2>}/>
               <Route path='/onBoarding2' element={<OnBoardingFanClub3></OnBoardingFanClub3>}/> */}
               <Route path='/halls' element={<HallsPage></HallsPage>}/>
-              <Route path='/my-concerts/:id' element={<RequireAuth><MyConcertsPage/></RequireAuth>}/>
               <Route path='/my-concerts/tickets/:id' element={<RequireAuth><MyConcertPage/></RequireAuth>}/>
+              <Route path='/my-concerts/:id' element={<RequireAuth><MyConcertsPage/></RequireAuth>}/>
 
               <Route path='/concerts2' element={<ConcertsPage2/>}/>
-
             </Routes> 
         </Router>
       </div>

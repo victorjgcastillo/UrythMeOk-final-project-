@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import ArtistCard from '../../components/Cards/ArtistCard';
 import HeaderAndBack from '../../components/HeaderAndBack/HeaderAndBack';
+import Navbar from '../../components/Navbar/Navbar';
 import './MyConcertsPage.scss';
 
 export default function MyConcertsPage() {
@@ -31,6 +32,9 @@ export default function MyConcertsPage() {
                         <ArtistCard concertId={ticket.concertId}/>
                     </Link>
                 ))}
+            </div>
+            <div className='footer'>
+                <Navbar/>
             </div>
         </div>
     );
