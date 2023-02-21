@@ -5,6 +5,7 @@ import './ArtistsPage.scss';
 import "../../styles/Slider.scss"        
 import ArtistGallery from '../../components/ArtistGallery/ArtistsGallery';
 import Header from '../../components/Header/Header';
+import Navbar from '../../components/Navbar/Navbar';
 
 export default function ArtistsPage() {
 
@@ -21,7 +22,9 @@ export default function ArtistsPage() {
 
     return (
     <div className='artistsPage'>
-        <Header></Header>
+        <div className='header-cont'>
+            <Header></Header>
+        </div>
         <div className='main'>
             <div className="artists-button__container">
                 <button className="artists-button selected">Artistas</button>
@@ -35,7 +38,7 @@ export default function ArtistsPage() {
             </div>
         </div>
         <div className='footer'>
-            Aqui estara el nav
+            <Navbar/>
         </div>
     </div>
     );

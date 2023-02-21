@@ -55,10 +55,6 @@ function App() {
               <Route path='/halls' element={<HallsPage></HallsPage>}/>
               <Route path='/my-concerts/tickets/:id' element={<RequireAuth><MyConcertPage/></RequireAuth>}/>
               <Route path='/my-concerts/:id' element={<RequireAuth><MyConcertsPage/></RequireAuth>}/>
-
-              {/* <Route path='/onBoarding' element={<OnBoardingFanClub></OnBoardingFanClub>}/> 
-              <Route path='/onBoarding1' element={<OnBoardingFanClub2></OnBoardingFanClub2>}/>
-              <Route path='/onBoarding2' element={<OnBoardingFanClub3></OnBoardingFanClub3>}/> */}
             </Routes> 
         </Router>
       </div>
