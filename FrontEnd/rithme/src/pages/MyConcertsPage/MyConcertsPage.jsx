@@ -28,7 +28,7 @@ export default function MyConcertsPage() {
             </div>
             <div className='main'>
                 {myConcerts.map((ticket,index)=> (
-                    <Link to={'/my-concerts/tickets/'+ticket._id} key={index} style={{paddingLeft: 13, textDecoration: 'none'}}>
+                    <Link to={'/my-concerts-detail/'+ticket.concertId} key={index} style={{paddingLeft: 13, textDecoration: 'none'}}>
                         <ArtistCard concertId={ticket.concertId}/>
                     </Link>
                 ))}
