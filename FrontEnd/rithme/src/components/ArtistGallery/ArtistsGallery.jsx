@@ -12,13 +12,13 @@ export default function ArtistGallery({artists}) {
                 </div>
                 <div className='artist__info'>
                     <div className='artist__info--1'>
-                        <h3>{artist.name}</h3>
+                        <h2>{artist.name}</h2>
                         <Link to={'/artists/'+artist._id} ><button>+ Info</button></Link>
                     </div>
                     <div className='artist__info--2'>
                         <div className='artist_genres'>
                             {artist.genres.map((genre,id)=>(
-                                <span key={id} className='genre'>{genre.name}</span>
+                                <h4 key={id} className='genre'>{genre.name}</h4>
                             ))}
                         </div>
                     </div>

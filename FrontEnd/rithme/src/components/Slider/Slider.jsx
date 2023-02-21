@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
-import "../../styles/Slider.css"
-import { AspectRatio } from '@chakra-ui/react'
+import "../../styles/Slider.scss"
+// import { AspectRatio } from '@chakra-ui/react'
 
 
 
@@ -34,43 +34,43 @@ export default function Slider() {
 
     
 
-    <motion.div className="slider-container">
+    <motion.div className="slider">
 
-    <div className="slider-h1">
+    <div className="slider__h1">
     <h1>ARTISTAS</h1>
     </div>
-    <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-3512.91}}>
+    <motion.div className="slider__motion" drag='x' dragConstraints={{right: 0, left:-3512.91}}>
     
     {categories.map((categorie, id)=> (
         
-    <motion.div className="slider-item" key={id}>
-            <img src={categorie.img} alt={categorie.name} className="slider-img" />                  
+    <motion.div className="slider__item" key={id}>
+            <img src={categorie.img} alt={categorie.name} className="slider__img" />                  
     </motion.div>
     ))}
     </motion.div>
 
 
-    <div className="slider-h1">
+    <div className="slider__h1">
     <h1>ESTILOS</h1>
     </div>
-    <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-1212.33}}>
+    <motion.div className="slider__motion" drag='x' dragConstraints={{right: 0, left:-1212.33}}>
 
     {genres.map((genre, id)=> (
-    <motion.div className="slider-item" key={id}>        
-            <img src={genre.img} alt={genre.name} className="slider-img" />                  
+    <motion.div className="slider__item" key={id}>        
+            <img src={genre.img} alt={genre.name} className="slider__img" />                  
     </motion.div>
     ))}
     </motion.div>
 
 
-    <div className="slider-h1">
+    <div className="slider__h1">
     <h1>SALAS</h1>
     </div>
-    <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-1212.33}}>
+    <motion.div className="slider__motion" drag='x' dragConstraints={{right: 0, left:-1212.33}}>
 
     {halls.map((halls, id)=> (
-    <motion.div className="slider-item" key={id}>        
-            <img src={halls.img} alt={halls.name} className="slider-img" />                  
+    <motion.div className="slider__item" key={id}>        
+            <img src={halls.img} alt={halls.name} className="slider__img" />                  
     </motion.div>
     ))}
     </motion.div>

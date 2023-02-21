@@ -3,7 +3,6 @@ import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import ArtistDetailsPage from './pages/ArtistDetailPage/ArtistDetailsPage';
 import TicketsPage from './pages/TicketsPage/TicketsPage';
 import HomePage from './pages/HomePage/HomePage';
-import Slider from './components/Slider/Slider';
 import { useState } from 'react';
 import { JwtContext } from './shared/contexts/JwtContext';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
@@ -13,7 +12,8 @@ import ArtistsPage from './pages/ArtistsPage/ArtistsPage';
 import Navbar from './components/Navbar/Navbar';
 import Artist from './pages/Artist/Artist';
 import * as React from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
+import HallsPage from './pages/HallsPage/HallsPage';
+// import { ChakraProvider } from '@chakra-ui/react';
 
 
 function App() {
@@ -35,6 +35,7 @@ function App() {
               <Route path='/tickets' element={<TicketsPage></TicketsPage>}/>
               <Route path='/navbar' element={<Navbar></Navbar>}/>
               <Route path='/artist' element={<Artist></Artist>}/>
+              <Route path='/halls' element={<HallsPage></HallsPage>}/>
             </Routes> 
         </Router>
       </div>

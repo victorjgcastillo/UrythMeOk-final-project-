@@ -1,0 +1,68 @@
+@import '../../styles/_colors.scss';
+
+
+.halls{
+    background: $background;
+    margin: 0 auto;
+    overflow-x: hidden;
+    &__motion{
+        display: flex;
+        cursor: grab;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    
+    }
+    
+    &__img{
+        width: 10rem;
+        height: 10rem;
+        object-fit: cover;
+        pointer-events: none;
+        box-shadow: 3px 3px 6px 2px #000000ad;
+        
+    }
+
+    &__item{
+        
+        margin: 1rem;
+        display: flex;
+        align-items: flex-start;
+        
+    }
+    &__info{
+            margin-left: 1rem;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        h2{
+            color: #014901;
+            margin-bottom: 10pt;
+        }
+    }
+}
+
+
+
+
+
+
+
+.concerts-button__container{
+
+    .concerts-button {
+        &.selected{
+            background-color: $theme-color;
+            border: solid 4px $theme-selected;
+        }
+
+        width: 70pt;
+        height: 31pt;
+        border-style: none;
+        font-size: 12pt;
+        margin: 20px;
+        background-color: $theme-color;
+        color: white;
+        border-radius: 12pt;
+    }
+}
