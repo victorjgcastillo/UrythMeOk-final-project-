@@ -18,7 +18,7 @@ const postTicket = async (req,res) => {
         const {
             userId,
             concertId,
-            numberOfTickets,
+            numTickets,
             name,
             email,
             postalCode,
@@ -31,7 +31,7 @@ const postTicket = async (req,res) => {
         const newTicket = new Ticket({
             userId:userId,
             concertId:concertId,
-            numTickets: numberOfTickets,
+            numTickets: numTickets,
             name: name,
             email:email,
             postalCode:postalCode,
@@ -39,7 +39,7 @@ const postTicket = async (req,res) => {
             creditCardExpirationDate:creditCardExpirationDate,
             creditCardCvv:creditCardCvv,
             creditCardOwner:creditCardOwner,
-            qr:""
+            qr:"https://makeqrcodenow.com/wp-content/uploads/2021/04/never-gonna-give-you-up-qr-code.png"
         });
         //Encrypt Sensible data
         newTicket.creditCardNumber = bcrypt.hashSync(newTicket.creditCardNumber, 10);
@@ -56,7 +56,7 @@ const postTicket = async (req,res) => {
 
 const getTickets = async(req, res) => {
     try {        
-        const allTickets = await Tickets.find();
+        const allTickets = await Ticket.find();
         res.status(200).json(allTickets);
     } catch (error) {
         return res.status(500).json(error);
