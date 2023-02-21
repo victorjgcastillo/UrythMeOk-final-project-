@@ -1,6 +1,7 @@
 
 import './OnBoardingFanClub.scss';
 import HeaderAndBack from "../../components/HeaderAndBack/HeaderAndBack";
+import { Link } from 'react-router-dom';
 
 
 const OnBoardingFanClub = () => {
@@ -25,9 +26,9 @@ const OnBoardingFanClub = () => {
 
       </div>
     <div>
-      <button className='on-boarding--button' onClick={() => alert('Quiero Unirme ahora')}>Quiero Unirme ahora</button>
+      <button className='on-boarding--button' onClick={() => alert('Quiero Unirme ahora')}><Link to="/onBoarding1">Quiero Unirme ahora </Link></button>
       </div>
-      <a href="https://www.example.com">Mas tarde</a>
+      <Link to="/"><p>Mas Tarde</p></Link>
     
     <p>AQUI VA EL NAVBAR</p>
     </div>

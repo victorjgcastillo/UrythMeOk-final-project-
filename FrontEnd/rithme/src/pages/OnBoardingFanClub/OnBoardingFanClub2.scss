@@ -1,11 +1,11 @@
-
 .onboarding{
    
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    background: linear-gradient(177deg, #005eb8 0%, #00ff88 64%);
+    background-image: url(../../../public/images/concierto.jpeg);
+    
 
     &--header{
         width: 100%;
@@ -31,8 +31,10 @@
         font-size: 10pt;
         margin: 50px;
         background-color: #0c4d3e;
-       
         color: white;
         border-radius: 12pt;
     }
+}
+p{
+    color: white;
 }

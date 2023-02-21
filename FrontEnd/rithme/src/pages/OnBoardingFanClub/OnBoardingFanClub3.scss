@@ -1,15 +1,24 @@
-
-.on-boarding{
+p{
+    color: black;
+}
+.onboarding{
    
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
     background-image: url(../../../public/images/concierto.jpeg);
+
     &--header{
         width: 100%;
         height: 80px;
     }
+
+    &-title{
+            color: yellow;
+            font-weight: bold;
+           }
+    
 
     &--parrafo{
         color: white;
