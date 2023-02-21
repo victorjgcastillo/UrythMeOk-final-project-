@@ -4,6 +4,8 @@ import Header from "../../components/Header/Header";
 import Slider from "../../components/Slider/Slider";
 import './HomePage.scss';
 import { Button } from 'primereact/button';
+import Navbar from "../../components/Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 
 
@@ -20,7 +22,7 @@ export default function HomePage() {
 
             <div className="home__container--buttons">
             <Button label="Amigos" icon="pi pi-users" rounded size="sm" className="home__container--button"/>
-            <Button label="Conciertos" outline badge={numero} rounded size="sm" className="home__container--button"/>
+            <Link to="/concerts"><Button label="Conciertos" outline badge={numero} rounded size="sm" className="home__container--button"/></Link>
             <Button label="Fan Club" icon="pi pi-star" rounded size="sm" className="home__container--button"/>
             </div>
 
@@ -35,6 +37,12 @@ export default function HomePage() {
                 </div>
             </div>
 
+
+                <div className="home__footer">
+
+                    <Navbar></Navbar>
+
+                </div>
         </div>
     )
 }

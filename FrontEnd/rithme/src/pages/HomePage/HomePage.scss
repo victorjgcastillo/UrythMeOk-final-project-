@@ -8,6 +8,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 75%;
+    overflow: scroll;
 
 
     &__title {
@@ -35,4 +37,14 @@
     margin-bottom: 10px;
     max-width: 140px;
 }
+
+    &__footer {
+
+            position: sticky;
+            top: 0;
+
+    }
+
 };
+
+

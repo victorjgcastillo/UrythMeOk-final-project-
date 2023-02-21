@@ -24,20 +24,12 @@ export default function Navbar() {
 
     return(
 
-        <div className="homePage">
 
-        <div className="main">
-        </div>
-
-        <div className="footer">
-
-
-        <div className="navbarcont">
-
+    <div className="navbarcont">
         <div className="navbar">
             <ul className='ul'>
                 <li className="list active">
-                    <a href="#" className='link'>
+                    <a href="/" className='link'>
                         <span className="icon">
                         <IoPersonOutline></IoPersonOutline>
                         </span>
@@ -45,7 +37,7 @@ export default function Navbar() {
                     </a>
                 </li>
                 <li className="list">
-                    <a href="#" className='link'>
+                    <a href="/" className='link'>
                         <span className="icon">
                         <IoSearchOutline></IoSearchOutline>
                         </span>
@@ -55,7 +47,7 @@ export default function Navbar() {
                 
                 <li className="list">
                     <Link to="/">
-                    <a href="#" className='link' Link>
+                    <a href="/" className='link' Link>
                         <span className="icon">
                         <IoHomeOutline></IoHomeOutline>
                         </span>
@@ -65,7 +57,7 @@ export default function Navbar() {
                 </li>
 
                 <li className="list">
-                    <a href="#" className='link'>
+                    <a href="/" className='link'>
                         <span className="icon">
                         <IoTicketOutline></IoTicketOutline>
                         </span>
@@ -74,7 +66,7 @@ export default function Navbar() {
                 </li>
 
                 <li className="list">
-                    <a href="#" className='link'>
+                    <a href="/" className='link'>
                         <span className="icon">
                         <IoSettingsOutline></IoSettingsOutline>
                         </span>
@@ -86,12 +78,7 @@ export default function Navbar() {
             </ul>
 
         </div>
-
         </div>
-        
-        </div>  
-</div>
-        
     )
     
 }

@@ -30,14 +30,12 @@ import "primeicons/primeicons.css";
 function App() {
 
   const [jwt, setJwt] = useState(localStorage.getItem('token') || null);
+  const [showDiv, setShowDiv] = useState(true);
+
 
   return (
     <JwtContext.Provider value={{ jwt, setJwt }}>
       <div className="App">
-
-          {/* <Header className="App__header"></Header>
-
-          <Navbar className="App_navbar"></Navbar> */}
 
       </div>
 

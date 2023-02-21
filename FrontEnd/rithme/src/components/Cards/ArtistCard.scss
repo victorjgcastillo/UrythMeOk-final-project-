@@ -1,6 +1,3 @@
-body {
-        background-color: rgb(60, 60, 60);
-}
 
 .card {
     position: relative;
@@ -11,26 +8,40 @@ body {
     border-radius: 15px;
     border: 0;
     background-color: white;
-
     
+    
+    
+        &__artist {
+            display: flex;
+            flex-wrap: nowrap;
 
-    &__artist {
-        display: flex;
-        flex-wrap: nowrap;
+            
+            &--img {
+                    width: 160px;
+                    height: 160px;
+                    object-fit: cover;
+                    border-radius: 15px;
+                }
+
         
-
-        &--img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 15px;
-        }
-
-        &--name {
-            margin: 15px;
-        }
-
-        &--date {
+            &--info{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: left;
+                padding:10px;
+                
+        
+                &--name {
+                    margin-bottom: 15px;
+                    font-weight: bolder;
+                }
+        
+                &--date {
+                }
+             
+            }
         }
     }
-}

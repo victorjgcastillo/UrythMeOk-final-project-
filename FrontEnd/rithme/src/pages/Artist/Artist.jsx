@@ -8,42 +8,48 @@ import axios from 'axios';
 
 function ArtistInfo() {
 
-    const [hall , setHall] = useState([]);
+    const [concerts, setConcert] = useState([]);
     const [artists, setArtists] = useState([]);
     const {id} = useParams();
 
+    // for (const concert of concerts) {
+    //   if (id === concert.artists._id) {
+        
+    //   }
+    // }
+
 
     useEffect(() => {
-        axios(`http://localhost:5000/artists/${id}`)
-          .then(response => {
-            setArtists(response.data);
-            console.log(response.data);
-          });
 
-        axios(`http://localhost:5000/concert/${id}`)
+        axios(`http://localhost:5000/concert/63ef73655c834835c222c314`)
           .then(response => {
-            setHall(response.data);
+            setConcert(response.data);
             console.log(response.data);
           });
         }, [id]);
 
 
-  return (
 
-    <div className='body'>
 
-            <Header></Header>
 
-            <ArtistCard></ArtistCard>
+    return (
 
-            <div className='content'>
-                <p className='content__hall'></p>
-                <p className='content__city'></p>
-                <p className='content__p'>{artists.biography}</p>
-            </div>
+      <div className='body'>
 
-    </div>
-  );
+              <Header></Header>
+
+              <ArtistCard/>
+
+
+              <div className='content'>
+                  <p className='content__hall'></p>
+                  <p className='content__city'></p>
+                  {/* <p className='content__p'>{concerts.biography}</p> */}
+              </div>
+
+      </div>
+    );
 }
+
 
 export default ArtistInfo;
