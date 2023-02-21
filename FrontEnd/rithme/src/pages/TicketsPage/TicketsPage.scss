@@ -1,26 +1,37 @@
 .tickets{
     border: 2px solid red;
-    &__tickets__imgContainer{
+
+    &__container{
         display: flex;
+
+        &--img {
+            max-width: 400px;
+            box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
     }
 
-    &__datos{
+    &__date{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
 
-    &__compra{
+    &__info {
+        
+    }
+
+    &__compra {
         display: flex;
     align-items: center;
     justify-content: flex-end;
-    }
 
-    &__compra button{
-        width: 77.5pt;
-        height: 40pt;
-        border-radius: 8pt;
-        border-style: groove;
-        background-color: aquamarine;
+        &--button {
+            width: 77.5pt;
+            height: 40pt;
+            border-radius: 8pt;
+            border-style: groove;
+            background-color: aquamarine;
+        }
     }
 }

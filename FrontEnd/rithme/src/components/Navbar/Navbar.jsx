@@ -1,21 +1,26 @@
 import { IoHomeOutline, IoPersonOutline, IoSearchOutline, IoTicketOutline, IoSettingsOutline } from "react-icons/io5";
 import './Navbar.css'
 import { Link } from 'react-router-dom';
+import { useEffect } from "react";
 
 
 export default function Navbar() {
 
 
-    const list = document.querySelectorAll(".list");
-        function activeLink(){
-            list.forEach((item) =>
-            item.classList.remove('active'));
-
-            this.classList.add('active');
+    useEffect(() => {
+        const list = document.querySelectorAll(".list");
+    
+        function activeLink() {
+          list.forEach((item) => item.classList.remove("active"));
+          this.classList.add("active");
         }
-
-        list.forEach((item) => 
-        item.addEventListener('click', activeLink));
+    
+        list.forEach((item) => item.addEventListener("click", activeLink));
+    
+        return () => {
+          list.forEach((item) => item.removeEventListener("click", activeLink));
+        };
+      }, []);
 
     return(
 

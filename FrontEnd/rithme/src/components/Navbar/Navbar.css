@@ -12,7 +12,7 @@
 
 .homePage {
     /* min-height: 100vh; */
-    background: var(--clr);
+    background: red;
     height: 100vh;
 
 }
@@ -106,7 +106,7 @@
     height: 70px;
     background: #FAFA33;
     border-radius: 50%;
-    border: 6px solid var(--clr);
+    border: 6px solid none;
     transition: 0.5s;
 }
 
@@ -119,7 +119,7 @@
     height: 20px;
     background: transparent;
     border-top-right-radius: 20px;
-    box-shadow: 1px -10px 0 0 var(--clr);
+    /* box-shadow: 1px -10px 0 0 transparent; */
 }
 
 .indicator::after {
@@ -131,7 +131,7 @@
     height: 20px;
     background: transparent;
     border-top-left-radius: 20px;
-    box-shadow: -1px -10px 0 0 var(--clr);
+    /* box-shadow: -1px -10px 0 0 transparent; */
 }
 
 .navbar ul li:nth-child(1).active ~ .indicator {
