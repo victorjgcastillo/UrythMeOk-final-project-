@@ -50,16 +50,15 @@ function App() {
               <Route path='/artist/:id' element={<Artist></Artist>}/>
               <Route path='/artist' element={<Artist></Artist>}/>
               <Route path='/logout' element={<LogOut></LogOut>}/>
-              <Route path='/concerts/buy/:concertId' element={<RequireAuth><PayPage></PayPage></RequireAuth>}/>
               <Route path='/concerts/buy2' element={<RequireAuth><AfterPayPage/></RequireAuth>}/> 
-              {/* <Route path='/onBoarding' element={<OnBoardingFanClub></OnBoardingFanClub>}/> 
-              <Route path='/onBoarding1' element={<OnBoardingFanClub2></OnBoardingFanClub2>}/>
-              <Route path='/onBoarding2' element={<OnBoardingFanClub3></OnBoardingFanClub3>}/> */}
+              <Route path='/concerts/buy/:concertId' element={<RequireAuth><PayPage></PayPage></RequireAuth>}/>
               <Route path='/halls' element={<HallsPage></HallsPage>}/>
               <Route path='/my-concerts/tickets/:id' element={<RequireAuth><MyConcertPage/></RequireAuth>}/>
               <Route path='/my-concerts/:id' element={<RequireAuth><MyConcertsPage/></RequireAuth>}/>
 
-              <Route path='/concerts2' element={<ConcertsPage2/>}/>
+              {/* <Route path='/onBoarding' element={<OnBoardingFanClub></OnBoardingFanClub>}/> 
+              <Route path='/onBoarding1' element={<OnBoardingFanClub2></OnBoardingFanClub2>}/>
+              <Route path='/onBoarding2' element={<OnBoardingFanClub3></OnBoardingFanClub3>}/> */}
             </Routes> 
         </Router>
       </div>
