@@ -1,8 +1,7 @@
 @import '../../styles/_colors.scss';
 
-
 .halls{
-    background: $background;
+{*/    background: $background;
     margin: 0 auto;
     overflow-x: hidden;
     &__motion{
@@ -45,30 +44,92 @@
             font-size: 12pt;
             font-weight: bold;
         }
-    }
-}
+        
+    height: 100vh;
+    width: 100%;
 
-
-
-
-
-
-
-.concerts-button__container{
-
-    .concerts-button {
-        &.selected{
-            background-color: $theme-color;
-            border: solid 4px $theme-selected;
-        }
-
-        width: 70pt;
-        height: 31pt;
-        border-style: none;
-        font-size: 12pt;
-        margin: 20px;
-        background-color: $theme-color;
+    .header-cont{
+        height: 10%;
+        width: 100%;
+        background: $background;
         color: white;
-        border-radius: 12pt;
+        
+        
+ /*}
+ 
+ 
     }
+
+    .main{
+        height: 75%;
+        width: 100%;
+        overflow: scroll;
+        background-color: $background-color;
+
+        .halls{
+            &__motion{
+                display: flex;
+                cursor: grab;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+            
+            }
+            
+            &__img{
+                width: 10rem;
+                height: 10rem;
+                object-fit: cover;
+                pointer-events: none;
+                box-shadow: 3px 3px 6px 2px #000000ad;
+                
+            }
+    
+            &__item{
+                
+                margin: 1rem;
+                display: flex;
+                align-items: flex-start;
+                
+            }
+            &__info{
+                    margin-left: 1rem;
+                    color: rgb(54, 54, 54);
+                    display: flex;
+                    flex-direction: column;
+                h2{
+                    color: $theme-color;
+                    margin-bottom: 10pt;
+                }
+            }
+        }
+    
+        .concerts-button__container{
+    
+            .concerts-button {
+                &.selected{
+                    background-color: $theme-color;
+                    border: solid 4px $theme-selected;
+                }
+    
+                width: 70pt;
+                height: 31pt;
+                border-style: none;
+                font-size: 12pt;
+                margin: 20px;
+                background-color: $theme-color;
+                color: white;
+                border-radius: 12pt;
+            }
+        }
+    
+    }
+    
+    .footer{
+        height: 15%;
+        width: 100%;
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+        background-color: $background-color;
+    }
+
 }

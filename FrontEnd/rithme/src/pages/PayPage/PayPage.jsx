@@ -90,7 +90,7 @@ export default function PayPage() {
     return (
         <div className="payPage"> 
             <div className='header'>
-                <HeaderAndBack back_url={'/'} name={'Compras tus entradas'}/>
+                <HeaderAndBack back_url={'/concerts/'+concertId} name={'Compras tus entradas'}/>
             </div>
             <div className='main'>
                 <div className='pay-page__container'>
