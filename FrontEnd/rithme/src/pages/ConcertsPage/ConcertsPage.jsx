@@ -2,9 +2,10 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ConcertsPage.scss';
-import { motion } from 'framer-motion';
-import "../../styles/Slider.css"        
+import "../../styles/Slider.scss"        
 import ConcertGallery from '../../components/ConcertGallery/ConcertGallery';
+import Navbar from '../../components/Navbar/Navbar';
+import { motion } from 'framer-motion';
 
 export default function ConcertsPage() {
 
@@ -53,21 +54,21 @@ export default function ConcertsPage() {
             <h1>Upgradify</h1>
         </div>
         <div className='main'>
-            <div className="concerts-button__container">
-                <Link to='/artists'><button className="concerts-button">Artists</button></Link>
-                <button className="concerts-button selected">Events</button>
-                <Link to='/halls'><button className="concerts-button">Halls</button></Link>
+        <div className="concerts-button__container">
+                <Link to='/artists'><button className="concerts-button">Artistas</button></Link>
+                <button className="concerts-button selected">Conciertos</button>
+                <Link to='/halls'><button className="concerts-button">Salas</button></Link>
             </div>
-            <motion.div className="slider-container">
-                <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-545.746}}>
+            <div className="slider-container">
+                <div className="slider">
                     {concerts.map((concertsArray)=> (
                         <ConcertGallery className='concerts-container' concerts={concertsArray}/>
                     ))}
-                </motion.div>
-            </motion.div>
+                </div>
+            </div>
         </div>
         <div className='footer'>
-            Aqui estara el nav
+            <Navbar/>
         </div>
     </div>
     );

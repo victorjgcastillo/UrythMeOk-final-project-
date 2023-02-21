@@ -9,14 +9,16 @@ import RegisterPage from './pages/RegisterPage/RegisterPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import ConcertsPage from './pages/ConcertsPage/ConcertsPage';
 import ArtistsPage from './pages/ArtistsPage/ArtistsPage';
-import Navbar from './components/Navbar/Navbar';
 import Artist from './pages/Artist/Artist';
 import * as React from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
 import PayPage from './pages/PayPage/PayPage';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import LogOut from './components/LogOut/LogOut';
-
+import HallsPage from './pages/HallsPage/HallsPage';
+import MyConcertsPage from './pages/MyConcertsPage/MyConcertsPage';
+import MyConcertPage from './pages/MyConcertPage/MyConcertPage';
+import AfterPayPage from './pages/AfterPayPage/AfterPayPage';
+import TicketsDetailsPage from './pages/TicketsDetailPage/TicketsDetailsPage';
 
 function App() {
 
@@ -24,25 +26,34 @@ function App() {
 
   return (
     <JwtContext.Provider value={{ jwt, setJwt }}>
-    {/* <ChakraProvider> */}
       <div className="App">
         <Router>
             <Routes>
               <Route path='/' element={<HomePage></HomePage>}/>
-              <Route path='/register' element={<RegisterPage/>}/>
-              <Route path='/login' element={<LoginPage/>}/>
               <Route path='/concerts' element={<ConcertsPage/>}/>
               <Route path='/artists' element={<ArtistsPage/>}/>
-              <Route path='/artistDetails' element={<ArtistDetailsPage></ArtistDetailsPage>}/>
-              <Route path='/tickets' element={<TicketsPage></TicketsPage>}/>
-              <Route path='/navbar' element={<Navbar></Navbar>}/>
-              <Route path='/artist/:id' element={<Artist></Artist>}/>
-              <Route path='/concerts/buy/:concertId' element={<RequireAuth><PayPage></PayPage></RequireAuth>}/>
+              <Route path='/halls' element={<HallsPage></HallsPage>}/>
+
+              <Route path='/register' element={<RegisterPage/>}/>
+              <Route path='/login' element={<LoginPage/>}/>
               <Route path='/logout' element={<LogOut></LogOut>}/>
+
+              <Route path='/artistDetails' element={<ArtistDetailsPage></ArtistDetailsPage>}/>
+
+              <Route path='/artist/:id' element={<Artist></Artist>}/>
+              <Route path='/artist' element={<Artist></Artist>}/>
+              
+              <Route path='/concerts/:id' element={<TicketsPage></TicketsPage>}/>
+              <Route path='/concerts/buy/:concertId' element={<RequireAuth><PayPage></PayPage></RequireAuth>}/>
+              <Route path='/concerts/buy2' element={<RequireAuth><AfterPayPage/></RequireAuth>}/> 
+
+              <Route path='/my-concerts/tickets/:id' element={<RequireAuth><MyConcertPage/></RequireAuth>}/>
+              <Route path='/my-concerts-detail/:id' element={<TicketsDetailsPage/>}/>
+              <Route path='/my-concerts/:id' element={<RequireAuth><MyConcertsPage/></RequireAuth>}/>
+
             </Routes> 
         </Router>
       </div>
-    {/* </ChakraProvider> */}
     </JwtContext.Provider>
   );
 }

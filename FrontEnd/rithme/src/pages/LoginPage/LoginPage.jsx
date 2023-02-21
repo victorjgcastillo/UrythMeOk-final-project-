@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import HeaderAndBack from '../../components/HeaderAndBack/HeaderAndBack';
 import LoginForm from '../../components/LoginForm/LoginForm';
+import Navbar from '../../components/Navbar/Navbar';
 import './LoginPage.scss';
 
 export default function LoginPage() {
     
-      return (
+    const navigate = useNavigate();    
+    const user = JSON.parse(localStorage.getItem('user'));
+    
+
+    useEffect(()=>{
+        if(user){
+            navigate("/my-concerts/"+user._id);
+        }
+    },[])
+
+    return (
         <div className='loginPage'>
             <div className='header'>
                 <HeaderAndBack back_url={'/'} name={'Login'}/>
@@ -14,8 +26,8 @@ export default function LoginPage() {
                 <LoginForm className='main__container'/>
             </div>
             <div className='footer'>
-                Aqui estara el nav
+                <Navbar/>
             </div>
         </div>
-      );
+    );
 }

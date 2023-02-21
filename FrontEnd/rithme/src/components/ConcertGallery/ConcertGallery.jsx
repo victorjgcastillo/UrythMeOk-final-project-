@@ -26,7 +26,7 @@ export default function ConcertGallery({concerts}) {
                                 <span className='genre'>{genre.name}</span>
                             ))}
                         </div>
-                        <span className='price'>{concert.price.$numberDecimal} €</span>
+                        <span className='price'>{concert.price} €</span>
                     </div>
                 </div>
             </div>

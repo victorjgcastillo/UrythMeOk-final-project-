@@ -1,0 +1,60 @@
+@import '../../styles//colors';
+
+.after-pay-page{
+
+    width: 100%;
+    height: 100vh;
+
+    .header{
+        width: 100%;
+        height: 10%;
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+        
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    }
+    
+    .main{
+        h1{
+            color: yellow;
+        }
+        
+        .compra{
+            height: 100%;
+           
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+    
+            gap: 40px;
+    
+            background: linear-gradient(177deg, #005eb8 0%, #00ff88 64%);
+        
+            &-parrafo{
+                color: white;
+            }
+        
+            &-button{
+                width: 150px;
+                height: 80px;
+                border-style: none;
+                font-family: "Oxygen";
+                font-weight: light;
+                font-size: 10pt;
+                margin: 50px;
+                background-color: #0c4d3e;
+               
+                color: white;
+                border-radius: 12pt;
+            }
+        }
+    }
+    
+    .footer{
+        height: 15%;
+        width: 100%;
+        background-color: $footer-color;
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+    }
+}
+

@@ -1,26 +1,89 @@
+@import '../../styles/_colors.scss';
+
 .tickets{
-    border: 2px solid red;
-    &__tickets__imgContainer{
+    background: $background;
+    height: 100vh;
+    width: 100%;
+
+    .header{
+        height: 10%;
+        width: 100%;
+
         display: flex;
+        justify-content: center;
+        align-items: center;
+
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+        
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     }
 
-    &__datos{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+
+    .main{
+        height: 75%;
+        width: 100%;
+        overflow: scroll;
+
+        .tickets{
+            &__tickets__imgContainer{
+                display: flex;
+            }
+    
+            &__img{
+                width: 20rem;
+                height: 20rem;
+                margin: 10%;
+                border-radius: 15px;
+                }
+    
+            &__fecha{
+                font-size: 20pt;
+                display: flex;
+                align-items: center;
+                margin: 3%;
+                width: 148px;
+            }   
+            &__datos{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                font-size: 1rem;
+                margin: 3%;
+    
+                h2{
+                    color: #014901;
+                    margin: 3%;
+                }
+            }
+    
+            &__iframe{
+                border: 3px;
+                border-radius: 15%;
+                margin: 3%;
+            }
+    
+            &__compra{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                margin-bottom: 5%;
+            }
+    
+            &__compra button{
+                width: 77.5pt;
+                height: 40pt;
+                border-radius: 8pt;
+                border-style: groove;
+                background-color: aquamarine;
+            }
+        }
     }
 
-    &__compra{
-        display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    }
 
-    &__compra button{
-        width: 77.5pt;
-        height: 40pt;
-        border-radius: 8pt;
-        border-style: groove;
-        background-color: aquamarine;
-    }
+    .footer{
+        height: 15%;
+        width: 100%;
+        background-color: $footer-color;
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+    }    
 }

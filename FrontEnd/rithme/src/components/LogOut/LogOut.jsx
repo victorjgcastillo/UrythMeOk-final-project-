@@ -9,6 +9,7 @@ export default function LogOut(){
 
     const logOut = () => {
         localStorage.removeItem('token');
+        localStorage.removeItem('user');
         setJwt(null);
         Navigate("/");
     }    

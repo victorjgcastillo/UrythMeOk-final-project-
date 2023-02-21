@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { useFormik } from "formik";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { API } from "../../shared/services/apiBackend";
 import { JwtContext } from '../../shared/contexts/JwtContext';
 import LogOut from '../LogOut/LogOut';
@@ -69,6 +69,7 @@ export default function LoginForm () {
               {registeredEmail===false && <span className='error'>Email not registered</span>}
               {forgotPassword===true && <span className='error'>Wrong Password</span>}
             </div>
+            <Link to='/register' style={{ textDecoration: 'none' }}><p className='cuenta-nueva'>Registar nuevo usuario</p></Link>
         </form>
       );
 }

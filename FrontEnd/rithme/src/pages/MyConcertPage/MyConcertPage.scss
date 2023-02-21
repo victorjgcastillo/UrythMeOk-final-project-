@@ -1,0 +1,36 @@
+@import '../../styles/_colors.scss';
+
+.myConcertPage{
+    width: 100%;
+    height: 100vh;
+
+    .header{
+        width: 100%;
+        height: 10%;
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+        
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .main{
+        height: 75%;
+        width: 100%;
+        overflow: scroll;
+
+
+        background-color: $background-color;
+        display: flex;
+        flex-direction: column;
+
+        // justify-content: center;
+        // align-items: center;
+    }
+
+
+    .footer{
+        height: 15%;
+        width: 100%;
+        background-color: $footer-color;
+        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+    }
+}

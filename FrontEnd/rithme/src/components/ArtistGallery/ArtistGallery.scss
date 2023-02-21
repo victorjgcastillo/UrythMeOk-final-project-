@@ -49,9 +49,9 @@
                 justify-content: space-between;
                 align-items: center;
 
-                h3{
-                    margin: 0px;
-                    font-size: small;
+                h2{
+                    
+                    color :$theme-h2;
                 }
 
                 button{
@@ -76,10 +76,11 @@
             &--2{
                 display: flex;
                 justify-content: space-between;
+                color: beige;
 
                 .genre{
                     margin: 0px 4px;
-                    font-size: x-small;
+                    
                 }
                 
                 .price{

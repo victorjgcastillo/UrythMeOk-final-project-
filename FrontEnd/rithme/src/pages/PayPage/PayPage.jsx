@@ -77,7 +77,7 @@ export default function PayPage() {
                     console.log(error.response.data.message)
                 })
 
-                navigate("/my-concerts");
+                navigate("/concerts/buy2");
 
             }).catch((error)=> {
                 console.log(error.response.data.message)
@@ -90,7 +90,7 @@ export default function PayPage() {
     return (
         <div className="payPage"> 
             <div className='header'>
-                <HeaderAndBack back_url={'/'} name={'Compras tus entradas'}/>
+                <HeaderAndBack back_url={'/concerts/'+concertId} name={'Compras tus entradas'}/>
             </div>
             <div className='main'>
                 <div className='pay-page__container'>
@@ -114,29 +114,29 @@ export default function PayPage() {
                             </select>
                             <p>Gastos de gestión: 0.90€</p>
                             <div className='bar'></div>
-                            <h3>{formik.values.numTickets*price+0.90}€</h3>
-                        </div>
-                        <h3 className='title'>Datos de Comprador</h3>
-                        <div className='label-div'>
-                            <input className="input" onChange={formik.handleChange} value={formik.values.name} id="name" name="name" onBlur={formik.handleBlur} placeholder="Nombre y Apellidos"/>
-                            <input className="input" onChange={formik.handleChange} value={formik.values.email} id="email" name="email" onBlur={formik.handleBlur} placeholder="Email"/>
-                            <input className="input" onChange={formik.handleChange} value={formik.values.postalCode} id="postalCode" name="postalCode" onBlur={formik.handleBlur} placeholder="Código Postal"/>
-                        </div>
-                        <h3 className='title'>Pago con tarjeta</h3>
-                        <div className='label-div'>
-                            <input className="input" onChange={formik.handleChange} value={formik.values.creditCardNumber} id="creditCardNumber" name="creditCardNumber" onBlur={formik.handleBlur} placeholder="Nº tarjeta"/>
-                            <div className='divide'>
-                                <input  className="input-half" onChange={formik.handleChange} value={formik.values.creditCardExpirationDate} id="creditCardExpirationDate" name="creditCardExpirationDate" onBlur={formik.handleBlur} placeholder="mes / año"/>
-                                <input className="input-half" onChange={formik.handleChange} value={formik.values.creditCardCvv} id="creditCardCvv" name="creditCardCvv" onBlur={formik.handleBlur} placeholder="CVV"/>
+                                <h3>{formik.values.numTickets*price+0.90}€</h3>
                             </div>
-                            <input className="input" onChange={formik.handleChange} value={formik.values.creditCardOwner} id="creditCardOwner" name="creditCardOwner" onBlur={formik.handleBlur} placeholder="Titular"/>
-                        </div>
-                        {formik.errors===undefined ? (<span className="error">All fields are required</span>) : null}
-                        <div className='form-submit'>
-                            <button className='submit-button' type="submit">Pagar</button>
-                        </div>
+                            <h3 className='title'>Datos de Comprador</h3>
+                            <div className='label-div'>
+                                <input className="input" onChange={formik.handleChange} value={formik.values.name} id="name" name="name" onBlur={formik.handleBlur} placeholder="Nombre y Apellidos"/>
+                                <input className="input" onChange={formik.handleChange} value={formik.values.email} id="email" name="email" onBlur={formik.handleBlur} placeholder="Email"/>
+                                <input className="input" onChange={formik.handleChange} value={formik.values.postalCode} id="postalCode" name="postalCode" onBlur={formik.handleBlur} placeholder="Código Postal"/>
+                            </div>
+                            <h3 className='title'>Pago con tarjeta</h3>
+                            <div className='label-div'>
+                                <input className="input" onChange={formik.handleChange} value={formik.values.creditCardNumber} id="creditCardNumber" name="creditCardNumber" onBlur={formik.handleBlur} placeholder="Nº tarjeta"/>
+                                <div className='divide'>
+                                    <input  className="input-half" onChange={formik.handleChange} value={formik.values.creditCardExpirationDate} id="creditCardExpirationDate" name="creditCardExpirationDate" onBlur={formik.handleBlur} placeholder="mes / año"/>
+                                    <input className="input-half" onChange={formik.handleChange} value={formik.values.creditCardCvv} id="creditCardCvv" name="creditCardCvv" onBlur={formik.handleBlur} placeholder="CVV"/>
+                                </div>
+                                <input className="input" onChange={formik.handleChange} value={formik.values.creditCardOwner} id="creditCardOwner" name="creditCardOwner" onBlur={formik.handleBlur} placeholder="Titular"/>
+                            </div>
+                            {formik.errors===undefined ? (<span className="error">All fields are required</span>) : null}
+                            <div className='form-submit'>
+                                <button className='submit-button' type="submit">Pagar</button>
+                            </div>
                     </form>
-                </div>
+                </div>    
             </div>
             <div className='footer'>
                 <Navbar/>
