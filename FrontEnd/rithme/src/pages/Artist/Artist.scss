@@ -1,5 +1,5 @@
 .body {
-    min-height: 100vh; /* Ajusta la altura mínima de la página al tamaño de la ventana del navegador */
+    height: 100vh; /* Ajusta la altura mínima de la página al tamaño de la ventana del navegador */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -17,6 +17,17 @@
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     }
   
+    &__main{
+      width: 75%;
+      overflow: scroll;
+
+      padding: 40px;
+
+      .genres{
+        margin:20px 0px;
+      }
+    }
+
     &__content {
       &--p {
         margin: 30px;

@@ -5,6 +5,7 @@ import './Artist.scss';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from '../../components/Navbar/Navbar';
+import HeaderAndBack from '../../components/HeaderAndBack/HeaderAndBack';
 
 
 function ArtistInfo() {
@@ -24,32 +25,32 @@ function ArtistInfo() {
 
         axios(`http://localhost:5000/artists/${id}`)
           .then(response => {
+            console.log(response.data)
             setConcert(response.data);
             setArtists(response.data);
-            console.log(response.data);
+            console.log(response.data.genres);
           });
         }, [id]);
-
-
-
-
 
     return (
 
       <div className='body'>
 
         <div className='body__header'>
-              <h1>Upgradify</h1>
+          <HeaderAndBack back_url={'/'} name={artists.name}/>
         </div>
-              <ArtistCard/>
+        <div className='body__main'>
+          <img src={artists.img} alt="img" width='200'/>
+          <div className='genres'>
+          {artists?.genres?.map((genre,id)=>(<span key={id}>{genre.name}</span>))}
+          </div>
 
-
-        <div className='body__content'>
-          <p className='body__content--hall'></p>
-          <p className='body__content--city'></p>
-          <p className='body__content--p'>{artists.biography}</p>
+          <div className='body__content'>
+            <p className='body__content--hall'></p>
+            <p className='body__content--city'></p>
+            <p className='body__content--p'>{artists.biography}</p>
+          </div>
         </div>
-
         <div className='body__footer'>
             <Navbar/>
         </div>
