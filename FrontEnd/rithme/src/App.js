@@ -14,6 +14,9 @@ import Navbar from './components/Navbar/Navbar';
 import Artist from './pages/Artist/Artist';
 import * as React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
+import CompraEfectuadaDespedidas from './pages/CompraEfectuadaDespedidas/CompraEfectuadaDespedidas';
+import OnBoardingFanClub from './pages/OnBoardingFanClub/OnBoardingFanClub';
+import OnBoardingFanClub2 from './pages/OnBoardingFanClub/OnBoardingFanClub2';
 
 
 function App() {
@@ -35,6 +38,9 @@ function App() {
               <Route path='/tickets' element={<TicketsPage></TicketsPage>}/>
               <Route path='/navbar' element={<Navbar></Navbar>}/>
               <Route path='/artist' element={<Artist></Artist>}/>
+              <Route path='/addEvent' element={<CompraEfectuadaDespedidas></CompraEfectuadaDespedidas>}/> 
+              <Route path='/onBoarding' element={<OnBoardingFanClub></OnBoardingFanClub>}/> 
+              <Route path='/onBoarding/register' element={<OnBoardingFanClub2></OnBoardingFanClub2>}/>
             </Routes> 
         </Router>
       </div>
