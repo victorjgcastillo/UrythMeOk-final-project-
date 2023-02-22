@@ -1,0 +1,25 @@
+.slider-container{
+
+    margin: 0 auto;
+    overflow-x: hidden;
+    border: 1px solid red;
+}
+
+.slider{
+    display: flex;
+    cursor: grab;
+
+}
+
+.slider-img{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.slider-item{
+    margin-left: 1rem;
+    
+}
+

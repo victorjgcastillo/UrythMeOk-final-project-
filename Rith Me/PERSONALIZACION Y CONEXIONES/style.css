@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(17 0 51);
+    height: 896px;
+}
+.container{
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    background-color: rgb(17 0 51);
+}
+
+.config{
+    background-color: rgb(255,220,53);
+}
+
+
+    
+
+
+.whitetext{
+    color: white;
+    
+
+}
+
+button{
+    width: 250pt;
+    height: 40pt;
+    text-align: start;
+    margin: 2pt;
+    color: rgb(17 0 51);
+    
+}
+
+.menuabajo ul li{
+    background-color: rgb(255,220,53);
+    list-style: none;
+    display: inline-block;
+    margin: 3px;
+    
+    
+}
+
+
+
+

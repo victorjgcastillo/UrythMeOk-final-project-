@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="pago.fanclub.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="config">
+            <h4>Fan Club</h4>
+        </div>
+
+        <div>
+            <h1 class="whitetext">Pago con tarjeta</h1>
+        </div>
+
+        <section class="ui">
+            <div class="container-left">
+                <form id="credit-card">
+                    <div class="number-container">
+                        <label>Número Tarjeta</label>
+                        <input type="text" name="card-number" id="card-number" maxlength="19"
+                            placeholder="xxxx - xxxx - xxxx - xxxx" required
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    </div>
+                    <div class="name-container">
+                        <label>Propietario</label>
+                        <input type="text" name="name-text" id="name-text" maxlength="30" placeholder="Nombre"
+                            required
+                            onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.key == ' '">
+                    </div>
+                    <div class="infos-container">
+                        <div class="expiration-container">
+                            <label>Validez</label>
+                            <input type="text" name="valid-thru-text" id="valid-thru-text" maxlength="5"
+                                placeholder="02/40" required
+                                onkeypress="return event.charCode >=48 && event.charCode <= 57">
+                        </div>
+                        <div class="cvv-container">
+                            <label>CVV</label>
+                            <input type="text" name="cvv-text" id="cvv-text" maxlength="4" placeholder="1234" required
+                                onkeypress="return event.charCode >=48 && event.charCode <= 57">
+                        </div>
+                    </div>
+                    <input type="submit" value="Agregar" id="add">
+                </form>
+            </div>
+
+        </section>
+
+        <div class="greenButton">
+
+            <input type="submit" value="Continuar" id="add">
+
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

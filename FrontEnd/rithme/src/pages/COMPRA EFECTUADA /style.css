@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(17 0 51);
+    height: 896px;
+}
+.container{
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    background-color: rgb(17 0 51);
+}
+
+.whitetext{
+    color: white;
+}
+
+.greenButton{
+    margin: 150px;
+}
+
+.linkverde{
+    color: rgb(77 213 153);
+}
+
+.yellow{
+    color: yellow;
+
+}
+
+.text{
+    margin: 30px;
+}
+
+button{
+    width: 60%;
+    background-color: rgb(77 213 153);
+    color:rgb(17 0 51) ;
+    border-radius: 25px;
+    height: 40px;
+}
