@@ -28,9 +28,12 @@
             &__title h2{
                 color: white;
                 font-size: 12pt;
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+
             }
             &__title h1{
                 color: rgb(234, 241, 4);
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
             }
             
             &__button {

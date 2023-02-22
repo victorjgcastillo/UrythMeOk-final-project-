@@ -3,9 +3,8 @@ import React, { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
 import "../../styles/Slider.scss"
 import { Link } from "react-router-dom";
+import "./Slider.scss";
 // import { AspectRatio } from '@chakra-ui/react'
-
-
 
 export default function Slider() {
 
@@ -22,12 +21,12 @@ export default function Slider() {
         axios('http://localhost:5000/genres')
         .then(res => {
             console.log(res.data);
-            setGenres(res.data)
+            setGenres(res.data);
         })
         axios('http://localhost:5000/halls')
         .then(res => {
             console.log(res.data);
-            setHalls(res.data)
+            setHalls(res.data);
         })
     }, [])
    

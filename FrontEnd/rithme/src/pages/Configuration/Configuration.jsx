@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import HeaderAndBack from "../../components/HeaderAndBack/HeaderAndBack";
 import Navbar from "../../components/Navbar/Navbar";
 import "./Configuration.scss";
@@ -46,7 +47,7 @@ export default function PersonalYconex() {
           </div>
 
           <div>
-            <button>Sincronizar tu musica</button>
+            <Link to="/config/music-platforms"><button>Sincronizar tu musica</button></Link>
           </div>
 
           <div>
