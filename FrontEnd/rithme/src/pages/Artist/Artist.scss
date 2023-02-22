@@ -1,47 +1,66 @@
 .body {
-    height: 100vh; /* Ajusta la altura mínima de la página al tamaño de la ventana del navegador */
+  height: 100vh; /* Ajusta la altura mínima de la página al tamaño de la ventana del navegador */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: scroll;
+
+  &__header {
+    height: 10%;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  &__main{
     overflow: scroll;
-  
-    &__header {
-      height: 10%;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
-      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-    }
-  
-    &__main{
-      width: 75%;
-      overflow: scroll;
 
-      padding: 40px;
+    padding: 10px;
 
-      .genres{
-        margin:20px 0px;
-      }
+    &--artist{
+
+      position: relative;
+      margin: 15px auto;
+      width: 380px;
+      padding: 15px;
+      box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+      border: 0;
+      background-color: white;
+
+        &--img {
+          margin-top: 15px;
+          width: 160px;
+          height: 160px;
+          object-fit: cover;
+          border-radius: 15px;
+        }
     }
 
-    &__content {
-      &--p {
-        margin: 30px;
-        text-align: justify;
-        font-size: 10pt;
-      }
-    }
-  
-    &__footer {
-      height: 15%;
-      width: 100%;
-      box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
-      position: fixed;
-      bottom: 0;
-      left: 0;
+    .genres{
+      margin:20px 0px;
     }
   }
+
+  &__content {
+    &--p {
+      margin: 20px;
+      text-align: justify;
+      font-size: 10pt;
+    }
+  }
+
+  &__footer {
+    height: 15%;
+    width: 100%;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+}

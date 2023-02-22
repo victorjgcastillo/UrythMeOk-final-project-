@@ -21,6 +21,16 @@ import AfterPayPage from './pages/AfterPayPage/AfterPayPage';
 import TicketsDetailsPage from './pages/TicketsDetailPage/TicketsDetailsPage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 
+//theme
+import "primereact/resources/themes/lara-light-indigo/theme.css";     
+    
+//core
+import "primereact/resources/primereact.min.css";
+
+//icons
+import "primeicons/primeicons.css";                                         
+         
+
 function App() {
 
   const [jwt, setJwt] = useState(localStorage.getItem('token') || null);

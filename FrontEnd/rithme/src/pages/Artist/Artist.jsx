@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../../components/Header/Header';
 import ArtistCard from '../../components/Cards/ArtistCard';
 import './Artist.scss';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from '../../components/Navbar/Navbar';
 import HeaderAndBack from '../../components/HeaderAndBack/HeaderAndBack';
+import { Button } from 'primereact/button';
+
 
 
 function ArtistInfo() {
@@ -13,12 +14,6 @@ function ArtistInfo() {
     const [concerts, setConcert] = useState([]);
     const [artists, setArtists] = useState([]);
     const {id} = useParams();
-
-    // for (const concert of concerts) {
-    //   if (id === concert.artists._id) {
-        
-    //   }
-    // }
 
 
     useEffect(() => {
@@ -39,18 +34,34 @@ function ArtistInfo() {
         <div className='body__header'>
           <HeaderAndBack back_url={'/'} name={artists.name}/>
         </div>
+
         <div className='body__main'>
-          <img src={artists.img} alt="img" width='200'/>
-          <div className='genres'>
-          {artists?.genres?.map((genre,id)=>(<span key={id}>{genre.name}</span>))}
+
+        {/* <ArtistCard></ArtistCard> */}
+        <div className='body__main--artist'>
+            <img src={artists.img} className="body__main--artist--img" alt="img" width='200'/>
+
+            <div className='genres'>
+
+              <p>{artists.name}</p>
+
+              {artists?.genres?.map((genre,id)=>(<span key={id}>{genre.name}</span>))}
+
+            </div>
+            
           </div>
 
           <div className='body__content'>
-            <p className='body__content--hall'></p>
-            <p className='body__content--city'></p>
+            {/* <p className='body__content--hall'></p>
+            <p className='body__content--city'></p> */}
             <p className='body__content--p'>{artists.biography}</p>
+
+            <Link to="/concerts"><Button label="Próximos eventos" raised /></Link>
+
           </div>
+
         </div>
+
         <div className='body__footer'>
             <Navbar/>
         </div>

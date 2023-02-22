@@ -10,6 +10,7 @@ export default function HomePage() {
 
     return (
         <div className="home"> 
+
             <div className="header">
                 <Header></Header>
             </div>  
@@ -20,7 +21,7 @@ export default function HomePage() {
                     <Link to='/halls'><button className="home__button">Salas</button></Link>
                 </div>
                 <div className="home__title">
-                    <h1 className="">¡Bienvenido Paco!</h1>
+                    <h1 className="">¡Bienvenido!</h1>
                     <h2 className="">¿Qué te apetece escuchar?</h2>
                 </div>
                 <div className="home__categories">
@@ -29,9 +30,11 @@ export default function HomePage() {
                     </div>
                 </div>
             </div>
+
             <div className='footer'>
                 <Navbar/>
             </div>
+            
         </div>
         
     )

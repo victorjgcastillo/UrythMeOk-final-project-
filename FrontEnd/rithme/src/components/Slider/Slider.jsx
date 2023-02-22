@@ -40,7 +40,7 @@ export default function Slider() {
         <div className="slider__cont">
             <h1>ARTISTAS</h1>
 
-            <motion.div className="slider__motion" drag='x' dragConstraints={{right: 0, left:-3512.91}}>
+            <motion.div className="slider__motion" drag='x' dragConstraints={{right: 0, left:-2792.91}}>
             
                 {artists.map((artist, id)=> (
                     
@@ -56,11 +56,12 @@ export default function Slider() {
 
         <div className="slider__cont">
             <h1>ESTILOS</h1>
-            <motion.div className="slider__motion" drag='x' dragConstraints={{right: 0, left:-1212.33}}>
+            <motion.div className="slider__motion" drag='x' dragConstraints={{right: 0, left:-922.33}}>
 
                 {genres.map((genre, id)=> (
                 <motion.div className="slider__item" key={id}>        
-                        <img src={genre.img} alt={genre.name} className="slider__img" />                  
+                        <img src={genre.img} alt={genre.name} className="slider__img" />
+                        <span className="slider__name">{genre.name}</span>                  
                 </motion.div>
                 ))}
 
@@ -71,11 +72,12 @@ export default function Slider() {
 
         <div className="slider__cont">
             <h1>SALAS</h1>
-            <motion.div className="slider__motion" drag='x' dragConstraints={{right: 0, left:-1212.33}}>
+            <motion.div className="slider__motion" drag='x' dragConstraints={{right: 0, left:-922.33}}>
 
                 {halls.map((halls, id)=> (
                 <motion.div className="slider__item" key={id}>        
-                        <img src={halls.img} alt={halls.name} className="slider__img" />                  
+                        <img src={halls.img} alt={halls.name} className="slider__img" /> 
+                        <span className="slider__name">{halls.name}</span>                 
                 </motion.div>
                 ))}
 

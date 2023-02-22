@@ -22,7 +22,8 @@ const AfterPayPage = () => {
             <p>incluir el evento en tu calendario?</p>
           </div>
           <div>
-            <Link to={'/my-concerts/'+myUser._id} style={{ textDecoration: 'none' }}>
+            <Link to={'/my-concerts/'} style={{ textDecoration: 'none' }}>
+            {/* <Link to={'/my-concerts/'+myUser._id} style={{ textDecoration: 'none' }}> */}
               <button className='compra-button' >Quiero incluirlo ahora</button>
             </Link>
           </div>
