@@ -28,6 +28,7 @@ import "primereact/resources/primereact.min.css";
 
 //icons
 import "primeicons/primeicons.css";     
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
 
