@@ -29,6 +29,9 @@ import "primereact/resources/primereact.min.css";
 
 //icons
 import "primeicons/primeicons.css";                                         
+import PersonalYconex from './pages/Configuration/Configuration';
+import Plataformas from './pages/Plataformas/Plataformas';
+import Loading from './pages/Loading/Loading';
          
 
 function App() {
@@ -64,6 +67,10 @@ function App() {
               <Route path='/my-concerts-detail/:id' element={<TicketsDetailsPage/>}/>
               <Route path='/my-concerts' element={<RequireAuth><MyConcertsPage/></RequireAuth>}/>
 
+              <Route path='/config' element={<RequireAuth><PersonalYconex/></RequireAuth>}/>
+              <Route path='/config/music-platforms' element={<RequireAuth><Plataformas/></RequireAuth>}/>
+
+              <Route path='/inicio' element={<Loading/>}/>
             </Routes> 
         </Router>
       </div>

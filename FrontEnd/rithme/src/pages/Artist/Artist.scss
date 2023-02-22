@@ -1,3 +1,5 @@
+@import '../../styles/colors';
+
 .body {
   height: 100vh; /* Ajusta la altura mínima de la página al tamaño de la ventana del navegador */
   width: 100%;
@@ -6,6 +8,8 @@
   justify-content: flex-start;
   align-items: center;
   overflow: scroll;
+
+  
 
   &__header {
     height: 10%;
@@ -19,7 +23,6 @@
 
   &__main{
     overflow: scroll;
-
     padding: 10px;
 
     &--artist{

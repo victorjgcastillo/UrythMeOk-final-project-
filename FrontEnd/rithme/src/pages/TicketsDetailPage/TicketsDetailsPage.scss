@@ -2,6 +2,9 @@
 
 
 .tickets{
+
+    background: $background;
+
     .header{
         height: 10%;
         width: 100%;
@@ -21,7 +24,6 @@
         overflow: scroll;
 
         .tickets{
-            background: $background;
 
             &__imgContainer{
                 display: flex;
@@ -88,7 +90,7 @@
     .footer{
         height: 15%;
         width: 100%;
-        background-color: $footer-color;
+        // background-color: $footer-color;
         box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.3);
     }    
 }
