@@ -29,6 +29,7 @@ import "primereact/resources/primereact.min.css";
 
 //icons
 import "primeicons/primeicons.css";                                         
+import PersonalYconex from './pages/Configuration/Configuration';
          
 
 function App() {
@@ -63,6 +64,9 @@ function App() {
               <Route path='/my-concerts/tickets/:id' element={<RequireAuth><MyConcertPage/></RequireAuth>}/>
               <Route path='/my-concerts-detail/:id' element={<TicketsDetailsPage/>}/>
               <Route path='/my-concerts' element={<RequireAuth><MyConcertsPage/></RequireAuth>}/>
+
+              <Route path='/config' element={<PersonalYconex/>}/>
+
 
             </Routes> 
         </Router>

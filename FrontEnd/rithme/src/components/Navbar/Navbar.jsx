@@ -59,12 +59,14 @@ export default function Navbar() {
                 </li>
 
                 <li className="list">
+                <Link to="/config">
                     <a href="#" className='link'>
                         <span className="icon">
                         <IoSettingsOutline></IoSettingsOutline>
                         </span>
                         <span className="text">Configuración</span>
                     </a>
+                </Link>
                 </li>
 
                 {/* <div className="indicator"></div> */}
