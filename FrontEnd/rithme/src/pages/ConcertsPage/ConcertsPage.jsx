@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ConcertsPage.scss';
 import { motion } from 'framer-motion';
-import "../../styles/Slider.css"        
+import "../../styles/Slider.scss"        
 import ConcertGallery from '../../components/ConcertGallery/ConcertGallery';
 
 export default function ConcertsPage() {

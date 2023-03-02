@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ArtistsPage.scss';
 import { motion } from 'framer-motion';
-import "../../styles/Slider.css"        
+import "../../styles/Slider.scss"        
 import ArtistGallery from '../../components/ArtistGallery/ArtistsGallery';
 
 export default function ArtistsPage() {

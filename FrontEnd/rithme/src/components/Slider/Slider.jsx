@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { motion } from 'framer-motion';
-import "../../styles/Slider.css"
+import "../../styles/Slider.scss"
 import { Link } from "react-router-dom";
 
 
@@ -36,18 +36,18 @@ export default function Slider() {
 
     
 
-    <motion.div className="slider-container">
+    <motion.div className="slider">
 
-        <div className="slider-h1">
+        <div className="slider--container">
             <h3>ARTISTAS</h3>
 
-            <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-2992.91}}>
+            <motion.div className="slider--container__div" drag='x' dragConstraints={{right: 0, left:-2992.91}}>
         
                 {artists.map((artist, id)=> (
             
-                <motion.div className="slider-item" key={id}>
-                        <img src={artist.img} alt={artist.name} className="slider-img"/>
-                        <Link to={`/artist/${artist._id}`}><span className="slider-name">{artist.name}</span></Link>                  
+                <motion.div className="slider--container__div--item" key={id}>
+                        <img src={artist.img} alt={artist.name} className="slider--container__div--item--img"/>
+                        <Link to={`/artist/${artist._id}`}><span className="slider--container__div--item--name">{artist.name}</span></Link>                  
 
                 </motion.div>
                 ))}
@@ -57,15 +57,15 @@ export default function Slider() {
 
 
 
-        <div className="slider-h1">
+        <div className="slider--container">
             <h3>ESTILOS</h3>
 
-            <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-1012.33}}>
+            <motion.div className="slider--container__div" drag='x' dragConstraints={{right: 0, left:-1012.33}}>
 
                 {genres.map((genre, id)=> (
-                <motion.div className="slider-item" key={id}>        
-                        <img src={genre.img} alt={genre.name} className="slider-img" />
-                        <Link to={`/artist/${genre._id}`}><span className="slider-name">{genre.name}</span></Link>
+                <motion.div className="slider--container__div--item" key={id}>        
+                        <img src={genre.img} alt={genre.name} className="slider--container__div--item--img" />
+                        <Link to={`/artist/${genre._id}`}><span className="slider--container__div--item--name">{genre.name}</span></Link>
                 </motion.div>
                 ))}
 
@@ -74,15 +74,15 @@ export default function Slider() {
 
 
 
-        <div className="slider-h1">
+        <div className="slider--container">
             <h3>SALAS</h3>
 
-            <motion.div className="slider" drag='x' dragConstraints={{right: 0, left:-1012.33}}>
+            <motion.div className="slider--container__div" drag='x' dragConstraints={{right: 0, left:-1012.33}}>
 
                 {halls.map((halls, id)=> (
-                <motion.div className="slider-item" key={id}>        
-                        <img src={halls.img} alt={halls.name} className="slider-img" />
-                        <Link to={`/artist/${halls._id}`}><span className="slider-name">{halls.name}</span></Link>               
+                <motion.div className="slider--container__div--item" key={id}>        
+                        <img src={halls.img} alt={halls.name} className="slider--container__div--item--img" />
+                        <Link to={`/artist/${halls._id}`}><span className="slider--container__div--item--name">{halls.name}</span></Link>               
                 </motion.div>
                 ))}
 
